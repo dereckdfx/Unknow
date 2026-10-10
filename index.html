@@ -4,7 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Unknow</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="intro" aria-hidden="true">
+  <svg id="logo" viewBox="0 0 24 24"><path fill="#fff" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+</div>
+<main id="login" class="hidden">
+  <svg class="mini" viewBox="0 0 24 24"><path fill="#fff" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  <h1>Inicia sesión</h1>
+  <p>Escribe tu código de acceso de 16 caracteres</p>
+  <form id="form" autocomplete="off">
+    <input id="code" type="text" maxlength="19" placeholder="XXXX-XXXX-XXXX-XXXX" spellcheck="false" autocapitalize="characters" required>
+    <button type="submit">Entrar</button>
+    <p id="error" role="alert"></p>
+  </form>
+</main>
+<script>window.CODE_HASH="733ac1da955902f9ffdae2b3afda1aa38c7c1cd6339dcb35099357ecebc3e84d";</script>
+<script src="script.js"></script>
 </body>
 </html>
