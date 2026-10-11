@@ -153,3 +153,6 @@ body.cardpage .top{background:linear-gradient(rgba(0,0,0,.65),transparent)}
 .results{-webkit-transform:translateZ(0)}
 
 .claim{display:inline-block;margin:.9em auto 0;padding:.55em 1.1em;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;font-size:.85rem;text-decoration:none;transition:background .2s,transform .25s var(--ease)}.claim:hover{background:rgba(255,255,255,.16);transform:translateY(-1px)}
+
+.acclink{position:fixed;right:14px;bottom:14px;z-index:30;padding:.6em 1.1em;border-radius:999px;background:rgba(30,30,36,.95);border:1px solid var(--line);color:#fff;text-decoration:none;font-size:.85rem}
+.bio{max-width:36em;margin:.6em auto 0;opacity:.85;line-height:1.4}

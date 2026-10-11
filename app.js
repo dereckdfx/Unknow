@@ -15,6 +15,7 @@
   const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.08}):null;
   window.observeReveal=function(root){(root||document).querySelectorAll('.reveal:not(.in)').forEach(el=>io?io.observe(el):el.classList.add('in'))};
   observeReveal();
+  document.addEventListener('DOMContentLoaded',()=>{if(location.pathname==='/cuenta.html'||location.pathname==='/'||/index/.test(location.pathname))return;const l=document.createElement('a');l.href='/cuenta.html';l.className='acclink';l.textContent='Mi cuenta';document.body.appendChild(l)});
   // guardia de sesión
   window.requireSession=async function(){
     try{const r=await fetch('/api/session',{cache:'no-store'});if(!r.ok)throw 0}
