@@ -16,523 +16,869 @@
  ],
  "sin_clasificar": [
   {
-   "nombre": "Axel santiago"
+   "nombre": "Axel santiago",
+   "slug": "axel-santiago",
+   "aka": "Axel santiago"
   },
   {
-   "nombre": "Camii"
+   "nombre": "Camii",
+   "slug": "camii",
+   "aka": "Camii"
   },
   {
-   "nombre": "Chofysita"
+   "nombre": "Chofysita",
+   "slug": "chofysita",
+   "aka": "Chofysita"
   },
   {
-   "nombre": "CHRIS"
+   "nombre": "CHRIS",
+   "slug": "chris",
+   "aka": "CHRIS"
   },
   {
-   "nombre": "Contrerasblueamy"
+   "nombre": "Contrerasblueamy",
+   "slug": "contrerasblueamy",
+   "aka": "Contrerasblueamy"
   },
   {
-   "nombre": "Daniela"
+   "nombre": "Daniela",
+   "slug": "daniela",
+   "aka": "Daniela"
   },
   {
-   "nombre": "David"
+   "nombre": "David",
+   "slug": "david",
+   "aka": "David"
   },
   {
-   "nombre": "Dorian castillo"
+   "nombre": "Dorian castillo",
+   "slug": "dorian-castillo",
+   "aka": "Dorian castillo"
   },
   {
-   "nombre": "Gabriel"
+   "nombre": "Gabriel",
+   "slug": "gabriel",
+   "aka": "Gabriel"
   },
   {
-   "nombre": "Geraldine Melany"
+   "nombre": "Geraldine Melany",
+   "slug": "geraldine-melany",
+   "aka": "Geraldine Melany"
   },
   {
-   "nombre": "Giovanni"
+   "nombre": "Giovanni",
+   "slug": "giovanni",
+   "aka": "Giovanni"
   },
   {
-   "nombre": "Jeremy"
+   "nombre": "Jeremy",
+   "slug": "jeremy",
+   "aka": "Jeremy"
   },
   {
-   "nombre": "Jessica"
+   "nombre": "Jessica",
+   "slug": "jessica",
+   "aka": "Jessica"
   },
   {
-   "nombre": "Jesús Miguel"
+   "nombre": "Jesús Miguel",
+   "slug": "jesus-miguel",
+   "aka": "Jesús Miguel"
   },
   {
-   "nombre": "Karim"
+   "nombre": "Karim",
+   "slug": "karim",
+   "aka": "Karim"
   },
   {
-   "nombre": "Killary nikte"
+   "nombre": "Killary nikte",
+   "slug": "killary-nikte",
+   "aka": "Killary nikte"
   },
   {
-   "nombre": "MarcyPapeadas222"
+   "nombre": "MarcyPapeadas222",
+   "slug": "marcypapeadas222",
+   "aka": "MarcyPapeadas222"
   },
   {
-   "nombre": "Rodrigo"
+   "nombre": "Rodrigo",
+   "slug": "rodrigo",
+   "aka": "Rodrigo"
   },
   {
-   "nombre": "Santiago"
+   "nombre": "Santiago",
+   "slug": "santiago",
+   "aka": "Santiago"
   },
   {
-   "nombre": "Triztan Rivera"
+   "nombre": "Triztan Rivera",
+   "slug": "triztan-rivera",
+   "aka": "Triztan Rivera"
   },
   {
-   "nombre": "Uriel"
+   "nombre": "Uriel",
+   "slug": "uriel",
+   "aka": "Uriel"
   },
   {
-   "nombre": "Vale"
+   "nombre": "Vale",
+   "slug": "vale",
+   "aka": "Vale"
   },
   {
-   "nombre": "Yamilet"
+   "nombre": "Yamilet",
+   "slug": "yamilet",
+   "aka": "Yamilet"
   },
   {
-   "nombre": "Yong"
+   "nombre": "Yong",
+   "slug": "yong",
+   "aka": "Yong"
   },
   {
-   "nombre": "Luigui 101"
+   "nombre": "Luigui 101",
+   "slug": "luigui-101",
+   "aka": "Luigui 101"
   },
   {
-   "nombre": "Sebitas 15 rc"
+   "nombre": "Sebitas 15 rc",
+   "slug": "sebitas-15-rc",
+   "aka": "Sebitas 15 rc"
   },
   {
-   "nombre": "Antonio Aguilar"
+   "nombre": "Antonio Aguilar",
+   "slug": "antonio-aguilar",
+   "aka": "Antonio Aguilar"
   },
   {
-   "nombre": "Zoe Agustiniano Buendia"
+   "nombre": "Zoe Agustiniano Buendia",
+   "slug": "zoe-agustiniano-buendia",
+   "aka": "Zoe Agustiniano Buendia"
   },
   {
-   "nombre": "Bryan Alexis"
+   "nombre": "Bryan Alexis",
+   "slug": "bryan-alexis",
+   "aka": "Bryan Alexis"
   },
   {
-   "nombre": "MARIA DE LOS ANGELES ALONSO GONZALEZ"
+   "nombre": "MARIA DE LOS ANGELES ALONSO GONZALEZ",
+   "slug": "maria-de-los-angeles-alonso-gonzalez",
+   "aka": "MARIA DE LOS ANGELES ALONSO GONZALEZ"
   },
   {
-   "nombre": "Orfanel Alvarado saldaña"
+   "nombre": "Orfanel Alvarado saldaña",
+   "slug": "orfanel-alvarado-saldana",
+   "aka": "Orfanel Alvarado saldaña"
   },
   {
-   "nombre": "Lennin Álvarez"
+   "nombre": "Lennin Álvarez",
+   "slug": "lennin-alvarez",
+   "aka": "Lennin Álvarez"
   },
   {
-   "nombre": "Mabel Alvarez"
+   "nombre": "Mabel Alvarez",
+   "slug": "mabel-alvarez",
+   "aka": "Mabel Alvarez"
   },
   {
-   "nombre": "Zaid Angeles"
+   "nombre": "Zaid Angeles",
+   "slug": "zaid-angeles",
+   "aka": "Zaid Angeles"
   },
   {
-   "nombre": "Viviana Grissel Arroyo Barbosa"
+   "nombre": "Viviana Grissel Arroyo Barbosa",
+   "slug": "viviana-grissel-arroyo-barbosa",
+   "aka": "Viviana Grissel Arroyo Barbosa"
   },
   {
-   "nombre": "Mara Arroyo"
+   "nombre": "Mara Arroyo",
+   "slug": "mara-arroyo",
+   "aka": "Mara Arroyo"
   },
   {
-   "nombre": "Jime Arteaga"
+   "nombre": "Jime Arteaga",
+   "slug": "jime-arteaga",
+   "aka": "Jime Arteaga"
   },
   {
-   "nombre": "Mariel Arteaga"
+   "nombre": "Mariel Arteaga",
+   "slug": "mariel-arteaga",
+   "aka": "Mariel Arteaga"
   },
   {
-   "nombre": "José antonio Aviles"
+   "nombre": "José antonio Aviles",
+   "slug": "jose-antonio-aviles",
+   "aka": "José antonio Aviles"
   },
   {
-   "nombre": "Rut Aurora Baez Cortes"
+   "nombre": "Rut Aurora Baez Cortes",
+   "slug": "rut-aurora-baez-cortes",
+   "aka": "Rut Aurora Baez Cortes"
   },
   {
-   "nombre": "Leo Rodrigo Beltrán Rodriguez"
+   "nombre": "Leo Rodrigo Beltrán Rodriguez",
+   "slug": "leo-rodrigo-beltran-rodriguez",
+   "aka": "Leo Rodrigo Beltrán Rodriguez"
   },
   {
-   "nombre": "mariacarmen buendia"
+   "nombre": "mariacarmen buendia",
+   "slug": "mariacarmen-buendia",
+   "aka": "mariacarmen buendia"
   },
   {
-   "nombre": "Nathanael Callejo"
+   "nombre": "Nathanael Callejo",
+   "slug": "nathanael-callejo",
+   "aka": "Nathanael Callejo"
   },
   {
-   "nombre": "maryazumojuela calzada vargas"
+   "nombre": "maryazumojuela calzada vargas",
+   "slug": "maryazumojuela-calzada-vargas",
+   "aka": "maryazumojuela calzada vargas"
   },
   {
-   "nombre": "Kevyn Uzziel Canseco"
+   "nombre": "Kevyn Uzziel Canseco",
+   "slug": "kevyn-uzziel-canseco",
+   "aka": "Kevyn Uzziel Canseco"
   },
   {
-   "nombre": "Sebastián Castillero"
+   "nombre": "Sebastián Castillero",
+   "slug": "sebastian-castillero",
+   "aka": "Sebastián Castillero"
   },
   {
-   "nombre": "Alondra Castro"
+   "nombre": "Alondra Castro",
+   "slug": "alondra-castro",
+   "aka": "Alondra Castro"
   },
   {
-   "nombre": "Donovan Cedillo"
+   "nombre": "Donovan Cedillo",
+   "slug": "donovan-cedillo",
+   "aka": "Donovan Cedillo"
   },
   {
-   "nombre": "Cesar Mahonry Cervantes Sanchez"
+   "nombre": "Cesar Mahonry Cervantes Sanchez",
+   "slug": "cesar-mahonry-cervantes-sanchez",
+   "aka": "Cesar Mahonry Cervantes Sanchez"
   },
   {
-   "nombre": "Karla Chavarría"
+   "nombre": "Karla Chavarría",
+   "slug": "karla-chavarria",
+   "aka": "Karla Chavarría"
   },
   {
-   "nombre": "angel chavez mateos"
+   "nombre": "angel chavez mateos",
+   "slug": "angel-chavez-mateos",
+   "aka": "angel chavez mateos"
   },
   {
-   "nombre": "Zuri Chavez"
+   "nombre": "Zuri Chavez",
+   "slug": "zuri-chavez",
+   "aka": "Zuri Chavez"
   },
   {
-   "nombre": "Itzel Coyotl"
+   "nombre": "Itzel Coyotl",
+   "slug": "itzel-coyotl",
+   "aka": "Itzel Coyotl"
   },
   {
-   "nombre": "Angel Cruz"
+   "nombre": "Angel Cruz",
+   "slug": "angel-cruz",
+   "aka": "Angel Cruz"
   },
   {
-   "nombre": "Arath Cruz"
+   "nombre": "Arath Cruz",
+   "slug": "arath-cruz",
+   "aka": "Arath Cruz"
   },
   {
-   "nombre": "Karina Cruz"
+   "nombre": "Karina Cruz",
+   "slug": "karina-cruz",
+   "aka": "Karina Cruz"
   },
   {
-   "nombre": "Renata De la rosa"
+   "nombre": "Renata De la rosa",
+   "slug": "renata-de-la-rosa",
+   "aka": "Renata De la rosa"
   },
   {
-   "nombre": "Oscar Omar De la torre"
+   "nombre": "Oscar Omar De la torre",
+   "slug": "oscar-omar-de-la-torre",
+   "aka": "Oscar Omar De la torre"
   },
   {
-   "nombre": "Guzman Esquivel"
+   "nombre": "Guzman Esquivel",
+   "slug": "guzman-esquivel",
+   "aka": "Guzman Esquivel"
   },
   {
-   "nombre": "Ashley Fernández"
+   "nombre": "Ashley Fernández",
+   "slug": "ashley-fernandez",
+   "aka": "Ashley Fernández"
   },
   {
-   "nombre": "Christina Flores Ramirez"
+   "nombre": "Christina Flores Ramirez",
+   "slug": "christina-flores-ramirez",
+   "aka": "Christina Flores Ramirez"
   },
   {
-   "nombre": "Nazul Fonseca"
+   "nombre": "Nazul Fonseca",
+   "slug": "nazul-fonseca",
+   "aka": "Nazul Fonseca"
   },
   {
-   "nombre": "Derek Alexander Franco"
+   "nombre": "Derek Alexander Franco",
+   "slug": "derek-alexander-franco",
+   "aka": "Derek Alexander Franco"
   },
   {
-   "nombre": "Sofia Frias"
+   "nombre": "Sofia Frias",
+   "slug": "sofia-frias",
+   "aka": "Sofia Frias"
   },
   {
-   "nombre": "Claudia Fuentes"
+   "nombre": "Claudia Fuentes",
+   "slug": "claudia-fuentes",
+   "aka": "Claudia Fuentes"
   },
   {
-   "nombre": "Santiago Galan"
+   "nombre": "Santiago Galan",
+   "slug": "santiago-galan",
+   "aka": "Santiago Galan"
   },
   {
-   "nombre": "ITA GAMER"
+   "nombre": "ITA GAMER",
+   "slug": "ita-gamer",
+   "aka": "ITA GAMER"
   },
   {
-   "nombre": "Alejandara Garcia"
+   "nombre": "Alejandara Garcia",
+   "slug": "alejandara-garcia",
+   "aka": "Alejandara Garcia"
   },
   {
-   "nombre": "Angel Garcia"
+   "nombre": "Angel Garcia",
+   "slug": "angel-garcia",
+   "aka": "Angel Garcia"
   },
   {
-   "nombre": "Diego García"
+   "nombre": "Diego García",
+   "slug": "diego-garcia",
+   "aka": "Diego García"
   },
   {
-   "nombre": "Elias Garcia"
+   "nombre": "Elias Garcia",
+   "slug": "elias-garcia",
+   "aka": "Elias Garcia"
   },
   {
-   "nombre": "Hugo santiago Garcia lopez"
+   "nombre": "Hugo santiago Garcia lopez",
+   "slug": "hugo-santiago-garcia-lopez",
+   "aka": "Hugo santiago Garcia lopez"
   },
   {
-   "nombre": "Leonel Garciamelendez"
+   "nombre": "Leonel Garciamelendez",
+   "slug": "leonel-garciamelendez",
+   "aka": "Leonel Garciamelendez"
   },
   {
-   "nombre": "BoyFiend GD"
+   "nombre": "BoyFiend GD",
+   "slug": "boyfiend-gd",
+   "aka": "BoyFiend GD"
   },
   {
-   "nombre": "Jessica Gomez"
+   "nombre": "Jessica Gomez",
+   "slug": "jessica-gomez",
+   "aka": "Jessica Gomez"
   },
   {
-   "nombre": "Renatta Gomez"
+   "nombre": "Renatta Gomez",
+   "slug": "renatta-gomez",
+   "aka": "Renatta Gomez"
   },
   {
-   "nombre": "carlos gomez santiz"
+   "nombre": "carlos gomez santiz",
+   "slug": "carlos-gomez-santiz",
+   "aka": "carlos gomez santiz"
   },
   {
-   "nombre": "Dael Alejandro Gómez Torres"
+   "nombre": "Dael Alejandro Gómez Torres",
+   "slug": "dael-alejandro-gomez-torres",
+   "aka": "Dael Alejandro Gómez Torres"
   },
   {
-   "nombre": "Josué Gonzalez"
+   "nombre": "Josué Gonzalez",
+   "slug": "josue-gonzalez",
+   "aka": "Josué Gonzalez"
   },
   {
-   "nombre": "María Fernanda González"
+   "nombre": "María Fernanda González",
+   "slug": "maria-fernanda-gonzalez",
+   "aka": "María Fernanda González"
   },
   {
-   "nombre": "Milán. A Guzmán Altamirano"
+   "nombre": "Milán. A Guzmán Altamirano",
+   "slug": "milan-a-guzman-altamirano",
+   "aka": "Milán. A Guzmán Altamirano"
   },
   {
-   "nombre": "Leonel Guzmán"
+   "nombre": "Leonel Guzmán",
+   "slug": "leonel-guzman",
+   "aka": "Leonel Guzmán"
   },
   {
-   "nombre": "Allison Sherlyn Guzmán romero"
+   "nombre": "Allison Sherlyn Guzmán romero",
+   "slug": "allison-sherlyn-guzman-romero",
+   "aka": "Allison Sherlyn Guzmán romero"
   },
   {
-   "nombre": "Osmart Ham"
+   "nombre": "Osmart Ham",
+   "slug": "osmart-ham",
+   "aka": "Osmart Ham"
   },
   {
-   "nombre": "Arlette Hernandez"
+   "nombre": "Arlette Hernandez",
+   "slug": "arlette-hernandez",
+   "aka": "Arlette Hernandez"
   },
   {
-   "nombre": "Atzayaka Hernández"
+   "nombre": "Atzayaka Hernández",
+   "slug": "atzayaka-hernandez",
+   "aka": "Atzayaka Hernández"
   },
   {
-   "nombre": "AXEL HERNANDEZ"
+   "nombre": "AXEL HERNANDEZ",
+   "slug": "axel-hernandez",
+   "aka": "AXEL HERNANDEZ"
   },
   {
-   "nombre": "Daniela Sthefany Hernández"
+   "nombre": "Daniela Sthefany Hernández",
+   "slug": "daniela-sthefany-hernandez",
+   "aka": "Daniela Sthefany Hernández"
   },
   {
-   "nombre": "Kevin Hernandez"
+   "nombre": "Kevin Hernandez",
+   "slug": "kevin-hernandez",
+   "aka": "Kevin Hernandez"
   },
   {
-   "nombre": "Rosaly Hernandez"
+   "nombre": "Rosaly Hernandez",
+   "slug": "rosaly-hernandez",
+   "aka": "Rosaly Hernandez"
   },
   {
-   "nombre": "Valentina hernandez"
+   "nombre": "Valentina hernandez",
+   "slug": "valentina-hernandez",
+   "aka": "Valentina hernandez"
   },
   {
-   "nombre": "maricela ibarra"
+   "nombre": "maricela ibarra",
+   "slug": "maricela-ibarra",
+   "aka": "maricela ibarra"
   },
   {
-   "nombre": "Mariana Jimenez"
+   "nombre": "Mariana Jimenez",
+   "slug": "mariana-jimenez",
+   "aka": "Mariana Jimenez"
   },
   {
-   "nombre": "Jordan Josette"
+   "nombre": "Jordan Josette",
+   "slug": "jordan-josette",
+   "aka": "Jordan Josette"
   },
   {
-   "nombre": "Ian Josue"
+   "nombre": "Ian Josue",
+   "slug": "ian-josue",
+   "aka": "Ian Josue"
   },
   {
-   "nombre": "Allison Yamilet Juárez Sánchez"
+   "nombre": "Allison Yamilet Juárez Sánchez",
+   "slug": "allison-yamilet-juarez-sanchez",
+   "aka": "Allison Yamilet Juárez Sánchez"
   },
   {
-   "nombre": "Leonardo Gabriel León León"
+   "nombre": "Leonardo Gabriel León León",
+   "slug": "leonardo-gabriel-leon-leon",
+   "aka": "Leonardo Gabriel León León"
   },
   {
-   "nombre": "Regina Leon"
+   "nombre": "Regina Leon",
+   "slug": "regina-leon",
+   "aka": "Regina Leon"
   },
   {
-   "nombre": "laura leon rodriguez"
+   "nombre": "laura leon rodriguez",
+   "slug": "laura-leon-rodriguez",
+   "aka": "laura leon rodriguez"
   },
   {
-   "nombre": "Sham Leyva"
+   "nombre": "Sham Leyva",
+   "slug": "sham-leyva",
+   "aka": "Sham Leyva"
   },
   {
-   "nombre": "Cristofher Linares"
+   "nombre": "Cristofher Linares",
+   "slug": "cristofher-linares",
+   "aka": "Cristofher Linares"
   },
   {
-   "nombre": "Eduardo Lopez Gonzalez"
+   "nombre": "Eduardo Lopez Gonzalez",
+   "slug": "eduardo-lopez-gonzalez",
+   "aka": "Eduardo Lopez Gonzalez"
   },
   {
-   "nombre": "Janetzy López"
+   "nombre": "Janetzy López",
+   "slug": "janetzy-lopez",
+   "aka": "Janetzy López"
   },
   {
-   "nombre": "Dorian Yael Luna García"
+   "nombre": "Dorian Yael Luna García",
+   "slug": "dorian-yael-luna-garcia",
+   "aka": "Dorian Yael Luna García"
   },
   {
-   "nombre": "Angel Martínez"
+   "nombre": "Angel Martínez",
+   "slug": "angel-martinez",
+   "aka": "Angel Martínez"
   },
   {
-   "nombre": "Emiliano Martinez"
+   "nombre": "Emiliano Martinez",
+   "slug": "emiliano-martinez",
+   "aka": "Emiliano Martinez"
   },
   {
-   "nombre": "Ivan Martinez"
+   "nombre": "Ivan Martinez",
+   "slug": "ivan-martinez",
+   "aka": "Ivan Martinez"
   },
   {
-   "nombre": "Sofia Martinez"
+   "nombre": "Sofia Martinez",
+   "slug": "sofia-martinez",
+   "aka": "Sofia Martinez"
   },
   {
-   "nombre": "Allison Mendez"
+   "nombre": "Allison Mendez",
+   "slug": "allison-mendez",
+   "aka": "Allison Mendez"
   },
   {
-   "nombre": "Iker Mendez"
+   "nombre": "Iker Mendez",
+   "slug": "iker-mendez",
+   "aka": "Iker Mendez"
   },
   {
-   "nombre": "Fátima Montaño"
+   "nombre": "Fátima Montaño",
+   "slug": "fatima-montano",
+   "aka": "Fátima Montaño"
   },
   {
-   "nombre": "Antonio Montes Cervantes"
+   "nombre": "Antonio Montes Cervantes",
+   "slug": "antonio-montes-cervantes",
+   "aka": "Antonio Montes Cervantes"
   },
   {
-   "nombre": "Daniel montes"
+   "nombre": "Daniel montes",
+   "slug": "daniel-montes",
+   "aka": "Daniel montes"
   },
   {
-   "nombre": "Tadeo Mora"
+   "nombre": "Tadeo Mora",
+   "slug": "tadeo-mora",
+   "aka": "Tadeo Mora"
   },
   {
-   "nombre": "Santiago Mtz"
+   "nombre": "Santiago Mtz",
+   "slug": "santiago-mtz",
+   "aka": "Santiago Mtz"
   },
   {
-   "nombre": "Alisson Muciño"
+   "nombre": "Alisson Muciño",
+   "slug": "alisson-mucino",
+   "aka": "Alisson Muciño"
   },
   {
-   "nombre": "Adela Jesabel Najera Cuevas"
+   "nombre": "Adela Jesabel Najera Cuevas",
+   "slug": "adela-jesabel-najera-cuevas",
+   "aka": "Adela Jesabel Najera Cuevas"
   },
   {
-   "nombre": "Margarita Navarro Acosta"
+   "nombre": "Margarita Navarro Acosta",
+   "slug": "margarita-navarro-acosta",
+   "aka": "Margarita Navarro Acosta"
   },
   {
-   "nombre": "Ricardo Navarro"
+   "nombre": "Ricardo Navarro",
+   "slug": "ricardo-navarro",
+   "aka": "Ricardo Navarro"
   },
   {
-   "nombre": "Israel Netza"
+   "nombre": "Israel Netza",
+   "slug": "israel-netza",
+   "aka": "Israel Netza"
   },
   {
-   "nombre": "Britany Nicolas"
+   "nombre": "Britany Nicolas",
+   "slug": "britany-nicolas",
+   "aka": "Britany Nicolas"
   },
   {
-   "nombre": "Yare Nol"
+   "nombre": "Yare Nol",
+   "slug": "yare-nol",
+   "aka": "Yare Nol"
   },
   {
-   "nombre": "Julieta Lourdes Nonato"
+   "nombre": "Julieta Lourdes Nonato",
+   "slug": "julieta-lourdes-nonato",
+   "aka": "Julieta Lourdes Nonato"
   },
   {
-   "nombre": "Emiliano Ocampo Bustamante"
+   "nombre": "Emiliano Ocampo Bustamante",
+   "slug": "emiliano-ocampo-bustamante",
+   "aka": "Emiliano Ocampo Bustamante"
   },
   {
-   "nombre": "Kendall Ocon"
+   "nombre": "Kendall Ocon",
+   "slug": "kendall-ocon",
+   "aka": "Kendall Ocon"
   },
   {
-   "nombre": "Yoselin Ortega"
+   "nombre": "Yoselin Ortega",
+   "slug": "yoselin-ortega",
+   "aka": "Yoselin Ortega"
   },
   {
-   "nombre": "María José Ortíz Reveles"
+   "nombre": "María José Ortíz Reveles",
+   "slug": "maria-jose-ortiz-reveles",
+   "aka": "María José Ortíz Reveles"
   },
   {
-   "nombre": "Leonardo Osorio Ayala"
+   "nombre": "Leonardo Osorio Ayala",
+   "slug": "leonardo-osorio-ayala",
+   "aka": "Leonardo Osorio Ayala"
   },
   {
-   "nombre": "Diego Osorio"
+   "nombre": "Diego Osorio",
+   "slug": "diego-osorio",
+   "aka": "Diego Osorio"
   },
   {
-   "nombre": "Yunsu Park"
+   "nombre": "Yunsu Park",
+   "slug": "yunsu-park",
+   "aka": "Yunsu Park"
   },
   {
-   "nombre": "Héctor Daniel Pedrajo Hita"
+   "nombre": "Héctor Daniel Pedrajo Hita",
+   "slug": "hector-daniel-pedrajo-hita",
+   "aka": "Héctor Daniel Pedrajo Hita"
   },
   {
-   "nombre": "Danna Lyah Pérez"
+   "nombre": "Danna Lyah Pérez",
+   "slug": "danna-lyah-perez",
+   "aka": "Danna Lyah Pérez"
   },
   {
-   "nombre": "Ricardo Pérez"
+   "nombre": "Ricardo Pérez",
+   "slug": "ricardo-perez",
+   "aka": "Ricardo Pérez"
   },
   {
-   "nombre": "Héctor PérezRam"
+   "nombre": "Héctor PérezRam",
+   "slug": "hector-perezram",
+   "aka": "Héctor PérezRam"
   },
   {
-   "nombre": "Ian André Pichardo"
+   "nombre": "Ian André Pichardo",
+   "slug": "ian-andre-pichardo",
+   "aka": "Ian André Pichardo"
   },
   {
-   "nombre": "Camila Pineda"
+   "nombre": "Camila Pineda",
+   "slug": "camila-pineda",
+   "aka": "Camila Pineda"
   },
   {
-   "nombre": "Mateos Rafita"
+   "nombre": "Mateos Rafita",
+   "slug": "mateos-rafita",
+   "aka": "Mateos Rafita"
   },
   {
-   "nombre": "Alexis Tadeo Ramirez"
+   "nombre": "Alexis Tadeo Ramirez",
+   "slug": "alexis-tadeo-ramirez",
+   "aka": "Alexis Tadeo Ramirez"
   },
   {
-   "nombre": "Graciela Ramirez Gonz"
+   "nombre": "Graciela Ramirez Gonz",
+   "slug": "graciela-ramirez-gonz",
+   "aka": "Graciela Ramirez Gonz"
   },
   {
-   "nombre": "Miguel Ramírez"
+   "nombre": "Miguel Ramírez",
+   "slug": "miguel-ramirez",
+   "aka": "Miguel Ramírez"
   },
   {
-   "nombre": "Rogelio Ramos"
+   "nombre": "Rogelio Ramos",
+   "slug": "rogelio-ramos",
+   "aka": "Rogelio Ramos"
   },
   {
-   "nombre": "Karolina Rendon"
+   "nombre": "Karolina Rendon",
+   "slug": "karolina-rendon",
+   "aka": "Karolina Rendon"
   },
   {
-   "nombre": "Amy Nahomi Reynoso De Lucio"
+   "nombre": "Amy Nahomi Reynoso De Lucio",
+   "slug": "amy-nahomi-reynoso-de-lucio",
+   "aka": "Amy Nahomi Reynoso De Lucio"
   },
   {
-   "nombre": "Jesus Ariel Rios"
+   "nombre": "Jesus Ariel Rios",
+   "slug": "jesus-ariel-rios",
+   "aka": "Jesus Ariel Rios"
   },
   {
-   "nombre": "judith rivas"
+   "nombre": "judith rivas",
+   "slug": "judith-rivas",
+   "aka": "judith rivas"
   },
   {
-   "nombre": "Lucero Rodríguez"
+   "nombre": "Lucero Rodríguez",
+   "slug": "lucero-rodriguez",
+   "aka": "Lucero Rodríguez"
   },
   {
-   "nombre": "Santiago Rodriguez"
+   "nombre": "Santiago Rodriguez",
+   "slug": "santiago-rodriguez",
+   "aka": "Santiago Rodriguez"
   },
   {
-   "nombre": "sharon rodríguez"
+   "nombre": "sharon rodríguez",
+   "slug": "sharon-rodriguez",
+   "aka": "sharon rodríguez"
   },
   {
-   "nombre": "THOMAS RODRIGUEZ"
+   "nombre": "THOMAS RODRIGUEZ",
+   "slug": "thomas-rodriguez",
+   "aka": "THOMAS RODRIGUEZ"
   },
   {
-   "nombre": "Angeles Meybel Rosales"
+   "nombre": "Angeles Meybel Rosales",
+   "slug": "angeles-meybel-rosales",
+   "aka": "Angeles Meybel Rosales"
   },
   {
-   "nombre": "Emily Ruiz"
+   "nombre": "Emily Ruiz",
+   "slug": "emily-ruiz",
+   "aka": "Emily Ruiz"
   },
   {
-   "nombre": "Evelyn Salazar"
+   "nombre": "Evelyn Salazar",
+   "slug": "evelyn-salazar",
+   "aka": "Evelyn Salazar"
   },
   {
-   "nombre": "Dante Saldaña"
+   "nombre": "Dante Saldaña",
+   "slug": "dante-saldana",
+   "aka": "Dante Saldaña"
   },
   {
-   "nombre": "Circe Salguero"
+   "nombre": "Circe Salguero",
+   "slug": "circe-salguero",
+   "aka": "Circe Salguero"
   },
   {
-   "nombre": "Karina Salguero"
+   "nombre": "Karina Salguero",
+   "slug": "karina-salguero",
+   "aka": "Karina Salguero"
   },
   {
-   "nombre": "Zoe Salinas"
+   "nombre": "Zoe Salinas",
+   "slug": "zoe-salinas",
+   "aka": "Zoe Salinas"
   },
   {
-   "nombre": "Arlethe Sánchez"
+   "nombre": "Arlethe Sánchez",
+   "slug": "arlethe-sanchez",
+   "aka": "Arlethe Sánchez"
   },
   {
-   "nombre": "Giancarlo Sanchez"
+   "nombre": "Giancarlo Sanchez",
+   "slug": "giancarlo-sanchez",
+   "aka": "Giancarlo Sanchez"
   },
   {
-   "nombre": "Isabella Sánchez"
+   "nombre": "Isabella Sánchez",
+   "slug": "isabella-sanchez",
+   "aka": "Isabella Sánchez"
   },
   {
-   "nombre": "Aelx Sanchz"
+   "nombre": "Aelx Sanchz",
+   "slug": "aelx-sanchz",
+   "aka": "Aelx Sanchz"
   },
   {
-   "nombre": "Jany Michel Sandoval González"
+   "nombre": "Jany Michel Sandoval González",
+   "slug": "jany-michel-sandoval-gonzalez",
+   "aka": "Jany Michel Sandoval González"
   },
   {
-   "nombre": "Mateo Serafín"
+   "nombre": "Mateo Serafín",
+   "slug": "mateo-serafin",
+   "aka": "Mateo Serafín"
   },
   {
-   "nombre": "Angy Sos"
+   "nombre": "Angy Sos",
+   "slug": "angy-sos",
+   "aka": "Angy Sos"
   },
   {
-   "nombre": "Atenea Sosa"
+   "nombre": "Atenea Sosa",
+   "slug": "atenea-sosa",
+   "aka": "Atenea Sosa"
   },
   {
-   "nombre": "Jannet Torres"
+   "nombre": "Jannet Torres",
+   "slug": "jannet-torres",
+   "aka": "Jannet Torres"
   },
   {
-   "nombre": "Dom Vallo"
+   "nombre": "Dom Vallo",
+   "slug": "dom-vallo",
+   "aka": "Dom Vallo"
   },
   {
-   "nombre": "Alexa Vega"
+   "nombre": "Alexa Vega",
+   "slug": "alexa-vega",
+   "aka": "Alexa Vega"
   },
   {
-   "nombre": "Armando Vega"
+   "nombre": "Armando Vega",
+   "slug": "armando-vega",
+   "aka": "Armando Vega"
   },
   {
-   "nombre": "betty Velasco"
+   "nombre": "betty Velasco",
+   "slug": "betty-velasco",
+   "aka": "betty Velasco"
   },
   {
-   "nombre": "Camila Velazquez Olalde"
+   "nombre": "Camila Velazquez Olalde",
+   "slug": "camila-velazquez-olalde",
+   "aka": "Camila Velazquez Olalde"
   },
   {
-   "nombre": "Camila Veza"
+   "nombre": "Camila Veza",
+   "slug": "camila-veza",
+   "aka": "Camila Veza"
   },
   {
-   "nombre": "Yael Villafuerte"
+   "nombre": "Yael Villafuerte",
+   "slug": "yael-villafuerte",
+   "aka": "Yael Villafuerte"
   },
   {
-   "nombre": "Lluvia Zarate"
+   "nombre": "Lluvia Zarate",
+   "slug": "lluvia-zarate",
+   "aka": "Lluvia Zarate"
   }
  ],
  "estudiantes_por_grado": {

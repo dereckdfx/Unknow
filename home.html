@@ -78,34 +78,7 @@ body{position:relative;overflow-x:hidden}
     document.getElementById('app').classList.add('ok');
   }catch{location.replace('index.html')}
 })();
-const s=document.getElementById('search'),q=document.getElementById('q'),c=document.getElementById('clear'),rp=document.getElementById('ripple');
-let tm;
-function bump(){
-  rp.classList.remove('go');void rp.offsetWidth;rp.classList.add('go');
-  s.classList.add('typing');clearTimeout(tm);tm=setTimeout(()=>s.classList.remove('typing'),500);
-}
-q.addEventListener('input',()=>{s.classList.toggle('has',q.value.length>0);bump()});
-q.addEventListener('keydown',e=>{if(e.key==='Backspace'||e.key==='Delete')bump()});
-c.addEventListener('click',()=>{
-  s.classList.add('clearing');
-  setTimeout(()=>{q.value='';s.classList.remove('has','clearing');bump();q.focus()},180);
-});
-
-const res=document.getElementById('results');
-const ITEMS=[{name:'Juan Rulfo',sub:'a.k.a Juan Rulfo 0986',url:'/escuela/juanrulfo.html'}];
-function norm(t){return t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim()}
-function render(){
-  const v=norm(q.value);
-  if(!v){res.classList.remove('show');return}
-  const m=ITEMS.filter(i=>norm(i.name).includes(v)||norm(i.sub).includes(v));
-  res.innerHTML=m.length?m.map(i=>`<a href="${i.url}"><span class="ico">${i.name[0]}</span><span>${i.name}<small>${i.sub}</small></span></a>`).join(''):'<div class="none">Sin resultados</div>';
-  res.classList.add('show');
-}
-q.addEventListener('input',render);
-q.addEventListener('keydown',e=>{if(e.key==='Enter'){const a=res.querySelector('a');if(a)location.href=a.getAttribute('href')}});
-document.addEventListener('click',e=>{if(!s.contains(e.target))res.classList.remove('show')});
-q.addEventListener('focus',render);
-c.addEventListener('click',()=>setTimeout(render,250));
 </script>
+<script src="/search.js"></script>
 </body>
 </html>

@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/estudiante/juanrulfo/:slug.html", "destination": "/estudiante.html" }
+  ]
+}
