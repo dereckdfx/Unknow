@@ -69,7 +69,7 @@ section h2{font-size:1.15rem;font-weight:700;margin-bottom:14px}
 (async()=>{try{const r=await fetch('/api/session');if(!r.ok){location.replace('/index.html');return}document.getElementById('app').classList.add('ok')}catch{location.replace('/index.html')}})();
 function esc(x){return String(x).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 function people(el,list){el.innerHTML=list.length?list.map(p=>'<div class="person"><div class="pic">'+(p.foto?'<img src="'+esc(p.foto)+'" alt="">':esc(p.nombre[0].toUpperCase()))+'</div>'+esc(p.nombre)+'</div>').join(''):'<div class="empty">Aún no hay nadie aquí.</div>'}
-fetch('/escuela/juanrulfo.json').then(r=>r.json()).then(D=>{
+fetch('/api/escuela').then(r=>r.json()).then(D=>{
   if(D.foto)document.getElementById('avatar').innerHTML='<img src="'+esc(D.foto)+'" alt="Juan Rulfo">';
   const groups=[{id:'sin',label:'Grado sin clasificar',list:D.sin_clasificar}].concat(D.grados.map(g=>({id:g,label:g,list:D.estudiantes_por_grado[g]||[]})));
   const chips=document.getElementById('chips'),est=document.getElementById('estudiantes');
