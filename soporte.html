@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/app.css?v=20261011i">
+<title>Soporte · Unknow</title>
+<style>
+.sup{max-width:520px;margin:24px auto 40px;padding:0 16px;display:flex;flex-direction:column;gap:12px;height:calc(100dvh - 60px)}
+.sup h1{text-align:center;font-size:1.4rem;margin:0}
+.log{flex:1;overflow:auto;display:flex;flex-direction:column;gap:8px;padding:12px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:20px}
+.b{max-width:80%;padding:9px 13px;border-radius:16px;font-size:.95rem;line-height:1.35;white-space:pre-wrap;word-break:break-word;background:#2a2a32;align-self:flex-start}
+.b.me{background:#fff;color:#000;align-self:flex-end}
+.b small{display:block;opacity:.5;font-size:.7rem;margin-top:3px}
+.row{display:flex;gap:8px}
+.row input{flex:1;background:rgba(255,255,255,.08);border:1px solid var(--line);border-radius:999px;padding:12px 16px;color:#fff;font-size:16px;outline:none}
+.row button,.sup .btn{border:0;border-radius:999px;padding:0 18px;background:#fff;color:#000;font-weight:600;cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center;min-height:44px}
+.hl{display:flex;flex-direction:column;gap:6px;overflow:auto}
+.hl button{background:rgba(255,255,255,.08);color:#fff;border:0;border-radius:14px;padding:10px 14px;text-align:left;font:inherit;cursor:pointer}
+.hl button.on{outline:2px solid #fff}
+.msg{text-align:center;font-size:.85rem;opacity:.8}
+</style>
+</head>
+<body>
+<div class="sup">
+  <h1>Chat de soporte</h1>
+  <div id="need" class="msg" style="display:none">Primero <a href="/cuenta.html" style="color:#fff">inicia sesión</a> para escribir a soporte.</div>
+  <div class="log" id="log"></div>
+  <form class="row" id="f"><input id="t" placeholder="Escribe tu mensaje..." autocomplete="off"><button>Enviar</button></form>
+  <a class="btn" href="/home.html" style="background:transparent;color:#fff;opacity:.7">← Volver</a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/app.js?v=20261011i"></script>
+<script src="/sb.js?v=20261011i"></script>
+<script>
+requireSession();
+const $=i=>document.getElementById(i);let me=null,last=0;
+const hora=s=>new Date(s).toLocaleTimeString('es-MX',{hour:'2-digit',minute:'2-digit'});
+async function load(){
+  const {data,error}=await sb.from('mensajes').select('*').eq('hilo',me.id).order('id');
+  if(error||!data)return;
+  const k=data.length?data[data.length-1].id:0;if(k===last&&data.length)return;last=k;
+  $('log').innerHTML=data.length?data.map(m=>'<div class="b'+(m.es_soporte?'':' me')+'">'+esc(m.texto)+'<small>'+(m.es_soporte?'Soporte · ':'')+hora(m.creado)+'</small></div>').join(''):'<div class="msg">Escríbenos tu duda y te respondemos aquí.</div>';
+  $('log').scrollTop=1e9;
+}
+(async()=>{
+  const {data:{session}}=await sb.auth.getSession();
+  if(!session){$('need').style.display='';$('f').style.display='none';return}
+  me=session.user;
+  const p=new URLSearchParams(location.search).get('p');if(p)$('t').value='Hola, necesito ayuda con el perfil: '+p;
+  await load();setInterval(load,4000);
+})();
+$('f').onsubmit=async e=>{e.preventDefault();const t=$('t').value.trim();if(!t||!me)return;$('t').value='';
+  const {error}=await sb.from('mensajes').insert({hilo:me.id,autor:me.id,es_soporte:false,texto:t});
+  if(error){$('t').value=t;alert(error.message)}else{last=0;load()}};
+</script>
+</body></html>
