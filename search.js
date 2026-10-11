@@ -8,7 +8,7 @@
     D.sin_clasificar.forEach(a=>add(a));
     Object.keys(D.estudiantes_por_grado||{}).forEach(g=>(D.estudiantes_por_grado[g]||[]).forEach(a=>add(a,g)));
     [].concat((D.maestros||[]).map(x=>[x,'Maestro']),(D.orientadores||[]).map(x=>[x,'Orientador'])).forEach(([a,r])=>ITEMS.push({name:a.nombre,sub:r+' de 3A',foto:'',url:'/estudiante/juanrulfo/'+a.slug+'.html'}));
-    (D.familiares||[]).forEach(a=>ITEMS.push({name:a.nombre,sub:a.rol,foto:a.foto||'',url:'/estudiante/juanrulfo/'+a.slug+'.html'}));
+    (D.familiares||[]).forEach(a=>ITEMS.push({name:a.nombre,sub:a.rol,ver:a.verificado||'',slug:a.slug,foto:a.foto||'',url:'/estudiante/juanrulfo/'+a.slug+'.html'}));
     if(q.value)render();
   }).catch(()=>{});
   function bump(){rp.classList.remove('go');void rp.offsetWidth;rp.classList.add('go');s.classList.add('typing');clearTimeout(tm);tm=setTimeout(()=>s.classList.remove('typing'),500)}

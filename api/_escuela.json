@@ -1821,6 +1821,96 @@
    "aka": "Laura León Rodríguez",
    "rol": "Mamá de Iker Santiago Méndez León",
    "hijo_slug": "iker-mendez"
+  },
+  {
+   "nombre": "Charli xcx",
+   "slug": "artista-charli-xcx",
+   "aka": "Charli xcx",
+   "rol": "Artista",
+   "verificado": "#1d9bf0",
+   "verif_motivos": [
+    "Es artista"
+   ]
+  },
+  {
+   "nombre": "Six Sex",
+   "slug": "artista-six-sex",
+   "aka": "Six Sex",
+   "rol": "Artista",
+   "verificado": "#1d9bf0",
+   "verif_motivos": [
+    "Es artista"
+   ]
+  },
+  {
+   "nombre": "Melanie Martinez",
+   "slug": "artista-melanie-martinez",
+   "aka": "Melanie Martinez",
+   "rol": "Artista",
+   "verificado": "#1d9bf0",
+   "verif_motivos": [
+    "Es artista"
+   ]
+  },
+  {
+   "nombre": "Olivia Rodrigo",
+   "slug": "artista-olivia-rodrigo",
+   "aka": "Olivia Rodrigo",
+   "rol": "Artista",
+   "verificado": "#1d9bf0",
+   "verif_motivos": [
+    "Es artista"
+   ]
+  },
+  {
+   "nombre": "Sabrina Carpenter",
+   "slug": "artista-sabrina-carpenter",
+   "aka": "Sabrina Carpenter",
+   "rol": "Artista",
+   "verificado": "#1d9bf0",
+   "verif_motivos": [
+    "Es artista"
+   ]
+  },
+  {
+   "nombre": "Billie Eilish",
+   "slug": "artista-billie-eilish",
+   "aka": "Billie Eilish",
+   "rol": "Artista",
+   "verificado": "#1d9bf0",
+   "verif_motivos": [
+    "Es artista"
+   ]
+  },
+  {
+   "nombre": "Bb Trickz",
+   "slug": "artista-bb-trickz",
+   "aka": "Bb Trickz",
+   "rol": "Artista",
+   "verificado": "#1d9bf0",
+   "verif_motivos": [
+    "Es artista"
+   ]
+  },
+  {
+   "nombre": "Bad Bunny",
+   "slug": "artista-bad-bunny",
+   "aka": "Bad Bunny",
+   "rol": "Artista",
+   "verificado": "#1d9bf0",
+   "verif_motivos": [
+    "Es artista"
+   ]
+  },
+  {
+   "nombre": "Young Miko",
+   "slug": "artista-young-miko",
+   "aka": "Young Miko",
+   "rol": "Artista",
+   "verificado": "#1d9bf0",
+   "verif_motivos": [
+    "Es artista"
+   ]
   }
  ]
 }
