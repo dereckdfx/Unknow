@@ -23,7 +23,7 @@
   };
   window.av=function(o){
     if(o&&!o.foto&&o.slug&&window.ALL){const f=window.ALL.find(x=>x.slug===o.slug);if(f)o=f}
-    return o&&o.foto?'<img src="'+esc(o.foto)+'" alt="">':esc(((o&&o.nombre)||'?')[0].toUpperCase());
+    return o&&o.foto?'<img src="'+esc(o.foto)+'" alt="" loading="eager" onerror="this.replaceWith(document.createTextNode(\''+esc(((o.nombre)||'?')[0].toUpperCase())+'\'))">':esc(((o&&o.nombre)||'?')[0].toUpperCase());
   };
   window.vbadge=function(o){
     if(o&&!o.verificado&&o.slug&&window.ALL){const f=window.ALL.find(x=>x.slug===o.slug);if(f)o=f}

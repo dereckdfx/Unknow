@@ -44,7 +44,7 @@ fetch('/api/escuela',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json
   document.title=p.nombre;
   nm.textContent=p.nombre;
   document.getElementById('aka').textContent='a.k.a '+p.aka;
-  document.getElementById('avatar').innerHTML=p.foto?'<img src="'+esc(p.foto)+'" alt="">':esc(p.nombre[0].toUpperCase());
+  document.getElementById('avatar').innerHTML=av(p);
   const main=document.querySelector('.profile');
   const chips=[];
   if(a)chips.push('<span class="tag">'+esc(grado==='Grado sin clasificar'?grado:'Grupo '+grado)+'</span>');
