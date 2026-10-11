@@ -1,7 +1,7 @@
 (function(){
   const s=document.getElementById('search'),q=document.getElementById('q'),c=document.getElementById('clear'),rp=document.getElementById('ripple'),res=document.getElementById('results');
   if(!s)return;
-  let tm,sel=-1,ITEMS=[{name:'Juan Rulfo',sub:'a.k.a Juan Rulfo 0986',url:'/escuela/juanrulfo.html'}];
+  let tm,sel=-1,ITEMS=[{role:'s',name:'Juan Rulfo',sub:'a.k.a Juan Rulfo 0986',url:'/escuela/juanrulfo.html'}];
   fetch('/api/escuela',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(D=>{
     if(!D)return;window.ALL=[].concat(D.sin_clasificar,...Object.values(D.estudiantes_por_grado||{}),D.familiares||[]);
     const add=(a,extra)=>ITEMS.push({name:a.mostrar||a.nombre,full:a.nombre,sub:(extra?extra+' · ':'')+'a.k.a '+a.aka,keys:(a.alias||[]).join(' '),foto:a.foto||'',ver:a.verificado||'',slug:a.slug,url:'/estudiante/juanrulfo/'+a.slug+'.html'});
@@ -24,7 +24,7 @@
     const v=norm(q.value);sel=-1;
     if(!v){res.classList.remove('show');return}
     const m=ITEMS.filter(i=>norm(i.name).includes(v)||norm(i.full||'').includes(v)||norm(i.sub).includes(v)||(i.keys&&norm(i.keys).includes(v))).sort((a,b)=>(norm(a.name).startsWith(v)?0:1)-(norm(b.name).startsWith(v)?0:1)).slice(0,8);
-    res.innerHTML=m.length?m.map((i,k)=>'<a href="'+i.url+'" style="--i:'+k+'"><span class="ico">'+(i.foto?'<img src="'+esc(i.foto)+'" alt="">':esc(i.name[0].toUpperCase()))+'</span><span>'+hl(i.name,v)+((i.ver&&window.vbadge)?window.vbadge({verificado:i.ver,slug:i.slug}):'')+'<small>'+esc(i.sub)+'</small></span></a>').join(''):'<div class="none">Sin resultados</div>';
+    res.innerHTML=m.length?m.map((i,k)=>'<a href="'+i.url+'" style="--i:'+k+'"><span class="ico">'+(i.foto?'<img src="'+esc(i.foto)+'" alt="">':esc(i.name[0].toUpperCase()))+'</span><span>'+hl(i.name,v)+((i.role&&window.rbadge)?window.rbadge(i.role):'')+((i.ver&&window.vbadge)?window.vbadge({verificado:i.ver,slug:i.slug}):'')+'<small>'+esc(i.sub)+'</small></span></a>').join(''):'<div class="none">Sin resultados</div>';
     res.classList.add('show');
    }catch(err){console.error(err);res.innerHTML='<div class="none">Error al buscar</div>';res.classList.add('show')}
   }

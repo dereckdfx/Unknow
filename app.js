@@ -40,7 +40,7 @@
     if(!v)return;
     e.preventDefault();e.stopPropagation();
     const o=(window.ALL||[]).find(x=>x.slug===v.dataset.slug);
-    const R={m:['Maestro verificado','Es maestro de Juan Rulfo'],o:['Orientador verificado','Es orientador de Juan Rulfo']}[v.dataset.role];
+    const R={m:['Maestro verificado','Es maestro de Juan Rulfo'],o:['Orientador verificado','Es orientador de Juan Rulfo'],s:['Escuela verificada','Escuela registrada y verificada en Unknow']}[v.dataset.role];
     const m=R?[R[1]]:((o&&o.verif_motivos)||[]);
     const pop=document.createElement('div');pop.className='vpop';
     pop.innerHTML='<b>'+(R?R[0]:'Perfil verificado')+'</b>'+(m.length?'<ul>'+m.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'<p>Sin detalles todavía.</p>');
@@ -55,6 +55,7 @@
   window.rbadge=function(r){
     if(r==='m')return '<svg class="vf rb rb-m" data-role="m" tabindex="0" viewBox="0 0 24 24" role="img" aria-label="Maestro verificado"><title>Maestro verificado</title><path fill="#22c55e" d="M22.5 12.5c0-1.58-.88-2.95-2.18-3.66.54-1.4.28-3.04-.84-4.16s-2.76-1.38-4.16-.84A4.2 4.2 0 0 0 12 1.5c-1.58 0-2.95.88-3.66 2.18-1.4-.54-3.04-.28-4.16.84s-1.38 2.76-.84 4.16A4.2 4.2 0 0 0 1.5 12.5c0 1.58.88 2.95 2.18 3.66-.54 1.4-.28 3.04.84 4.16s2.76 1.38 4.16.84c.71 1.3 2.08 2.18 3.66 2.18s2.95-.88 3.66-2.18c1.4.54 3.04.28 4.16-.84s1.38-2.76.84-4.16c1.3-.71 2.18-2.08 2.18-3.66z"/><path fill="#fff" d="M12 7 5 10.2l7 3.2 5.2-2.4v3.8h1.3v-4.4zM8 13.3v2.2c0 1 1.8 2 4 2s4-1 4-2v-2.2l-4 1.8z"/></svg>';
     if(r==='o')return '<svg class="vf rb rb-o" data-role="o" tabindex="0" viewBox="0 0 24 24" role="img" aria-label="Orientador verificado"><title>Orientador verificado</title><path fill="#a855f7" d="M12 1.5 20.5 4.7v6.6c0 5-3.4 9.4-8.5 11.2-5.1-1.8-8.5-6.2-8.5-11.2V4.7z"/><path fill="#fff" d="M12 6.2l1.6 3.3 3.6.5-2.6 2.5.6 3.6-3.2-1.7-3.2 1.7.6-3.6-2.6-2.5 3.6-.5z"/></svg>';
+    if(r==='s')return '<svg class="vf rb rb-s" data-role="s" tabindex="0" viewBox="0 0 24 24" role="img" aria-label="Escuela verificada"><title>Escuela verificada</title><path fill="#f59e0b" d="M22.5 12.5c0-1.58-.88-2.95-2.18-3.66.54-1.4.28-3.04-.84-4.16s-2.76-1.38-4.16-.84A4.2 4.2 0 0 0 12 1.5c-1.58 0-2.95.88-3.66 2.18-1.4-.54-3.04-.28-4.16.84s-1.38 2.76-.84 4.16A4.2 4.2 0 0 0 1.5 12.5c0 1.58.88 2.95 2.18 3.66-.54 1.4-.28 3.04.84 4.16s2.76 1.38 4.16.84c.71 1.3 2.08 2.18 3.66 2.18s2.95-.88 3.66-2.18c1.4.54 3.04.28 4.16-.84s1.38-2.76.84-4.16c1.3-.71 2.18-2.08 2.18-3.66z"/><path fill="#fff" d="M12 6 5.5 9v1.2h13V9zM7 11.2v4.6H5.5v1.5h13v-1.5H17v-4.6h-1.5v4.6h-2v-4.6h-3v4.6h-2v-4.6z"/></svg>';
     return '';
   };
   window.vbadge=function(o){return vbadge0(o)+ubadge(o)};
