@@ -837,6 +837,23 @@
     "aka": "Ian Josue",
     "amigos": [
      "iker-mendez"
+    ],
+    "familia": [
+     {
+      "rol": "Hermano",
+      "nombre": "Gordillo Salazar Eithan Emanuel",
+      "slug": "gordillo-salazar-eithan-emanuel"
+     },
+     {
+      "rol": "Padre",
+      "nombre": "",
+      "slug": ""
+     },
+     {
+      "rol": "Madre",
+      "nombre": "",
+      "slug": ""
+     }
     ]
    },
    {
@@ -845,6 +862,23 @@
     "aka": "Gordillo Salazar Eithan Emanuel",
     "amigos": [
      "iker-mendez"
+    ],
+    "familia": [
+     {
+      "rol": "Hermano",
+      "nombre": "Gordillo Salazar Ian Josue",
+      "slug": "ian-josue"
+     },
+     {
+      "rol": "Padre",
+      "nombre": "",
+      "slug": ""
+     },
+     {
+      "rol": "Madre",
+      "nombre": "",
+      "slug": ""
+     }
     ]
    },
    {
