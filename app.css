@@ -124,3 +124,16 @@ a.person:active{transform:scale(.97)}
 .profile.card .ms .msd{color:#fff}
 .profile.card .person,.profile.card .chip{background:rgba(255,255,255,.08)}
 @media (max-width:520px){.banner span{font-size:84px}.profile.card{margin-left:10px;margin-right:10px;border-radius:24px}}
+
+/* tarjeta a pantalla completa */
+body.cardpage{background:linear-gradient(#5e0049 0,#3d0032 45%,#1b0015 100%) fixed}
+body.cardpage .top{background:linear-gradient(rgba(0,0,0,.65),transparent)}
+.profile.card{max-width:none;width:100%;margin:0;padding:0 0 70px;border-radius:0;border:0;box-shadow:none;background:transparent;overflow:visible;min-height:calc(100vh - 96px)}
+.profile.card .banner{height:clamp(190px,30vh,300px);margin-top:-96px;padding-top:96px}
+.profile.card .banner span{font-size:clamp(110px,22vw,260px);-webkit-text-stroke:3px rgba(255,70,90,.55);transform:translateY(0)}
+.profile.card .avatar{margin:-70px 0 16px clamp(20px,6vw,90px);width:clamp(120px,14vw,170px);height:clamp(120px,14vw,170px);border-width:8px}
+.profile.card h1,.profile.card .aka,.profile.card .tags,.profile.card section{padding-left:clamp(20px,6vw,90px);padding-right:clamp(20px,6vw,90px)}
+.profile.card h1{font-size:clamp(1.6rem,4vw,2.8rem)}
+.profile.card .aka{font-size:1.1rem}
+.profile.card section{max-width:1200px}
+@media (max-width:520px){.profile.card{margin:0;border-radius:0}.profile.card .banner span{font-size:30vw}}
