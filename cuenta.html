@@ -71,7 +71,7 @@ $('go').onclick=async()=>{
   const email=$('em').value.trim(),password=$('pw').value;say('m1','');
   if(!email||!password)return say('m1','Escribe correo y contraseña.','err');
   $('go').disabled=true;
-  const r=mode==='login'?await sb.auth.signInWithPassword({email,password}):await sb.auth.signUp({email,password});
+  const r=mode==='login'?await sb.auth.signInWithPassword({email,password}):await sb.auth.signUp({email,password,options:{emailRedirectTo:location.origin+'/cuenta.html'}});
   $('go').disabled=false;
   if(r.error)return say('m1',traduce(r.error.message),'err');
   if(!r.data.session)return say('m1','Cuenta creada. Si pide confirmar correo, revisa tu bandeja y vuelve a entrar.','ok');
