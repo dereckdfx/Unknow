@@ -137,3 +137,6 @@ body.cardpage .top{background:linear-gradient(rgba(0,0,0,.65),transparent)}
 .profile.card .aka{font-size:1.1rem}
 .profile.card section{max-width:1200px}
 @media (max-width:520px){.profile.card{margin:0;border-radius:0}.profile.card .banner span{font-size:30vw}}
+
+.person .vf,.results .vf{width:1em;height:1em;margin-left:.25em;vertical-align:-.15em;animation:none;filter:none}
+.results .vf{width:.95em;height:.95em}
