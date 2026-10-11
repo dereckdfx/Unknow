@@ -19,11 +19,13 @@
     return esc(text.slice(0,i))+'<mark>'+esc(text.slice(i,i+v.length))+'</mark>'+esc(text.slice(i+v.length));
   }
   function render(){
+   try{
     const v=norm(q.value);sel=-1;
     if(!v){res.classList.remove('show');return}
     const m=ITEMS.filter(i=>norm(i.name).includes(v)||norm(i.full||'').includes(v)||norm(i.sub).includes(v)||(i.keys&&norm(i.keys).includes(v))).sort((a,b)=>(norm(a.name).startsWith(v)?0:1)-(norm(b.name).startsWith(v)?0:1)).slice(0,8);
-    res.innerHTML=m.length?m.map((i,k)=>'<a href="'+i.url+'" style="--i:'+k+'"><span class="ico">'+(i.foto?'<img src="'+esc(i.foto)+'" alt="">':esc(i.name[0].toUpperCase()))+'</span><span>'+hl(i.name,v)+(i.ver?window.vbadge({verificado:i.ver,slug:i.slug}):'')+'<small>'+esc(i.sub)+'</small></span></a>').join(''):'<div class="none">Sin resultados</div>';
+    res.innerHTML=m.length?m.map((i,k)=>'<a href="'+i.url+'" style="--i:'+k+'"><span class="ico">'+(i.foto?'<img src="'+esc(i.foto)+'" alt="">':esc(i.name[0].toUpperCase()))+'</span><span>'+hl(i.name,v)+((i.ver&&window.vbadge)?window.vbadge({verificado:i.ver,slug:i.slug}):'')+'<small>'+esc(i.sub)+'</small></span></a>').join(''):'<div class="none">Sin resultados</div>';
     res.classList.add('show');
+   }catch(err){console.error(err);res.innerHTML='<div class="none">Error al buscar</div>';res.classList.add('show')}
   }
   function move(d){
     const a=[...res.querySelectorAll('a')];if(!a.length)return;

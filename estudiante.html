@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="stylesheet" href="/app.css">
+<link rel="stylesheet" href="/app.css?v=20261011b">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 <title>Unknow</title>
@@ -29,7 +29,7 @@
     <div class="tags" id="tags"></div>
   </main>
 </div>
-<script src="/app.js"></script>
+<script src="/app.js?v=20261011b"></script>
 <script>
 requireSession();
 const slug=decodeURIComponent(location.pathname.split('/').pop().replace(/\.html$/,''));
@@ -84,6 +84,6 @@ fetch('/api/escuela',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json
   observeReveal(main);
 }).catch(()=>{document.getElementById('nm').textContent='No se pudo cargar'});
 </script>
-<script src="/search.js"></script>
+<script src="/search.js?v=20261011b"></script>
 </body>
 </html>

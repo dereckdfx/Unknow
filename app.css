@@ -37,11 +37,11 @@ kbd{flex:none;font:600 .72rem/1 inherit;color:var(--muted);border:1px solid var(
 @keyframes ripple{0%{opacity:.9;box-shadow:0 0 0 0 rgba(255,255,255,.45)}100%{opacity:0;box-shadow:0 0 0 16px rgba(255,255,255,0)}}
 
 /* resultados */
-.results{position:absolute;top:calc(100% + 10px);left:0;right:0;padding:8px;border-radius:26px;background:rgba(18,18,22,.72);border:1px solid var(--line);
-  backdrop-filter:blur(26px) saturate(170%);-webkit-backdrop-filter:blur(26px) saturate(170%);box-shadow:0 18px 50px rgba(0,0,0,.6);max-height:min(60vh,420px);overflow:auto;
+.results{position:absolute;top:calc(100% + 10px);left:0;right:0;padding:8px;border-radius:26px;background:rgba(20,20,26,.97);border:1px solid var(--line);
+  box-shadow:0 18px 50px rgba(0,0,0,.6);max-height:min(60vh,420px);overflow:auto;
   opacity:0;transform:translateY(-10px) scale(.97);transform-origin:top center;pointer-events:none;transition:opacity .25s,transform .35s var(--ease)}
 .results.show{opacity:1;transform:none;pointer-events:auto}
-.results a{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:18px;color:#fff;text-decoration:none;transition:background .2s,transform .25s var(--ease);opacity:0;animation:rise .4s var(--ease) forwards;animation-delay:calc(var(--i,0)*35ms)}
+.results a{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:18px;color:#fff;text-decoration:none;transition:background .2s,transform .25s var(--ease);animation:rise .4s var(--ease) both;animation-delay:calc(var(--i,0)*35ms)}
 .results a:hover,.results a.sel{background:rgba(255,255,255,.14);transform:translateX(4px)}
 .results .ico{width:36px;height:36px;border-radius:50%;flex:none;background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.06));display:flex;align-items:center;justify-content:center;font-size:.92rem;font-weight:700}
 .results small{display:block;color:var(--muted);font-size:.8rem;margin-top:1px}
@@ -149,3 +149,5 @@ body.cardpage .top{background:linear-gradient(rgba(0,0,0,.65),transparent)}
 
 .ulogo{width:.8em;height:.8em;margin-left:.3em;vertical-align:-.08em;display:inline-block;animation:vfin .8s var(--ease) .65s both;filter:drop-shadow(0 0 8px rgba(255,92,157,.5))}
 .person .ulogo,.results .ulogo{width:1em;height:1em;margin-left:.25em;vertical-align:-.15em;animation:none;filter:none}
+
+.results{-webkit-transform:translateZ(0)}
