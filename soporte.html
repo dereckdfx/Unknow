@@ -54,6 +54,6 @@ async function load(){
 })();
 $('f').onsubmit=async e=>{e.preventDefault();const t=$('t').value.trim();if(!t||!me)return;$('t').value='';
   const {error}=await sb.from('mensajes').insert({hilo:me.id,autor:me.id,es_soporte:false,texto:t});
-  if(error){$('t').value=t;alert(error.message)}else{last=0;load()}};
+  if(error){$('t').value=t;$('need').style.display='';$('need').textContent='No se pudo enviar: '+error.message}else{$('need').style.display='none';last=0;load()}};
 </script>
 </body></html>

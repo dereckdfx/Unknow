@@ -52,9 +52,9 @@ $('hl').onclick=e=>{const b=e.target.closest('button');if(!b)return;cur=b.datase
 (async()=>{
   const {data:{session}}=await sb.auth.getSession();
   if(!session){$('need').style.display='';$('need').innerHTML='<a href="/cuenta.html" style="color:#fff">Inicia sesión</a> con la cuenta de administrador.';$('f').style.display='none';return}
-  me=session.user;await load();setInterval(load,4000);
+  me=session.user;cur=cur||null;await load();setInterval(load,4000);
 })();
-$('f').onsubmit=async e=>{e.preventDefault();const t=$('t').value.trim();if(!t||!cur)return;$('t').value='';
+$('f').onsubmit=async e=>{e.preventDefault();const t=$('t').value.trim();if(!t)return;if(!cur){$('need').style.display='';$('need').textContent='Elige primero una conversación de la lista.';return}$('t').value='';
   const {error}=await sb.from('mensajes').insert({hilo:cur,autor:me.id,es_soporte:true,texto:t});
   if(error){$('t').value=t;$('need').style.display='';$('need').textContent='No se pudo enviar: '+error.message}else{$('need').style.display='none';load()}};
 </script>
