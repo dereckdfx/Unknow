@@ -911,6 +911,16 @@
       "rol": "Mamá",
       "nombre": "Laura León Rodríguez",
       "slug": "laura-leon-rodriguez"
+     },
+     {
+      "rol": "Padre",
+      "nombre": "",
+      "slug": ""
+     },
+     {
+      "rol": "Hermano",
+      "nombre": "",
+      "slug": ""
      }
     ],
     "amigos": [
