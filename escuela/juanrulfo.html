@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="stylesheet" href="/app.css?v=20261011b">
+<link rel="stylesheet" href="/app.css?v=20261011c">
 <title>Juan Rulfo</title>
 </head>
 <body>
@@ -30,12 +30,12 @@
     <section class="reveal"><h2>Directores:</h2><div class="grid" id="directores"></div></section>
   </main>
 </div>
-<script src="/app.js?v=20261011b"></script>
+<script src="/app.js?v=20261011c"></script>
 <script>
 requireSession();
-function people(el,list,link){
+function people(el,list,link,role){
   el.innerHTML=list.length?list.map((p,i)=>{
-    const inner='<div class="pic">'+av(p)+'</div>'+esc(dn(p))+vbadge(p);
+    const inner='<div class="pic">'+av(p)+'</div>'+esc(dn(p))+vbadge(p)+(role?rbadge(role):'');
     return link&&p.slug?'<a class="person" style="--i:'+i+'" href="/estudiante/juanrulfo/'+p.slug+'.html">'+inner+'</a>':'<div class="person" style="--i:'+i+'">'+inner+'</div>';
   }).join(''):'<div class="empty">Aún no hay nadie aquí.</div>';
 }
@@ -48,11 +48,11 @@ fetch('/api/escuela',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json
   chips.innerHTML=groups.map((g,i)=>'<button class="chip" style="--i:'+i+'" data-id="'+g.id+'">'+esc(g.label)+'<small>'+g.list.length+'</small></button>').join('');
   chips.addEventListener('click',e=>{const c=e.target.closest('.chip');if(c)show(c.dataset.id)});
   show('sin');
-  people(document.getElementById('maestros'),D.maestros);
-  people(document.getElementById('orientadores'),D.orientadores);
+  people(document.getElementById('maestros'),D.maestros,false,'m');
+  people(document.getElementById('orientadores'),D.orientadores,false,'o');
   people(document.getElementById('directores'),D.directores);
 }).catch(()=>{document.getElementById('estudiantes').innerHTML='<div class="empty">No se pudo cargar. Recarga la página.</div>'});
 </script>
-<script src="/search.js?v=20261011b"></script>
+<script src="/search.js?v=20261011c"></script>
 </body>
 </html>
