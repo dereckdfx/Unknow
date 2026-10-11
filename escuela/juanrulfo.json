@@ -1,0 +1,559 @@
+{
+ "foto": "",
+ "grados": [
+  "1A",
+  "1B",
+  "1C",
+  "1D",
+  "2A",
+  "2B",
+  "2C",
+  "2D",
+  "3A",
+  "3B",
+  "3C",
+  "3D"
+ ],
+ "sin_clasificar": [
+  {
+   "nombre": "Axel santiago"
+  },
+  {
+   "nombre": "Camii"
+  },
+  {
+   "nombre": "Chofysita"
+  },
+  {
+   "nombre": "CHRIS"
+  },
+  {
+   "nombre": "Contrerasblueamy"
+  },
+  {
+   "nombre": "Daniela"
+  },
+  {
+   "nombre": "David"
+  },
+  {
+   "nombre": "Dorian castillo"
+  },
+  {
+   "nombre": "Gabriel"
+  },
+  {
+   "nombre": "Geraldine Melany"
+  },
+  {
+   "nombre": "Giovanni"
+  },
+  {
+   "nombre": "Jeremy"
+  },
+  {
+   "nombre": "Jessica"
+  },
+  {
+   "nombre": "Jesús Miguel"
+  },
+  {
+   "nombre": "Karim"
+  },
+  {
+   "nombre": "Killary nikte"
+  },
+  {
+   "nombre": "MarcyPapeadas222"
+  },
+  {
+   "nombre": "Rodrigo"
+  },
+  {
+   "nombre": "Santiago"
+  },
+  {
+   "nombre": "Triztan Rivera"
+  },
+  {
+   "nombre": "Uriel"
+  },
+  {
+   "nombre": "Vale"
+  },
+  {
+   "nombre": "Yamilet"
+  },
+  {
+   "nombre": "Yong"
+  },
+  {
+   "nombre": "Luigui 101"
+  },
+  {
+   "nombre": "Sebitas 15 rc"
+  },
+  {
+   "nombre": "Antonio Aguilar"
+  },
+  {
+   "nombre": "Zoe Agustiniano Buendia"
+  },
+  {
+   "nombre": "Bryan Alexis"
+  },
+  {
+   "nombre": "MARIA DE LOS ANGELES ALONSO GONZALEZ"
+  },
+  {
+   "nombre": "Orfanel Alvarado saldaña"
+  },
+  {
+   "nombre": "Lennin Álvarez"
+  },
+  {
+   "nombre": "Mabel Alvarez"
+  },
+  {
+   "nombre": "Zaid Angeles"
+  },
+  {
+   "nombre": "Viviana Grissel Arroyo Barbosa"
+  },
+  {
+   "nombre": "Mara Arroyo"
+  },
+  {
+   "nombre": "Jime Arteaga"
+  },
+  {
+   "nombre": "Mariel Arteaga"
+  },
+  {
+   "nombre": "José antonio Aviles"
+  },
+  {
+   "nombre": "Rut Aurora Baez Cortes"
+  },
+  {
+   "nombre": "Leo Rodrigo Beltrán Rodriguez"
+  },
+  {
+   "nombre": "mariacarmen buendia"
+  },
+  {
+   "nombre": "Nathanael Callejo"
+  },
+  {
+   "nombre": "maryazumojuela calzada vargas"
+  },
+  {
+   "nombre": "Kevyn Uzziel Canseco"
+  },
+  {
+   "nombre": "Sebastián Castillero"
+  },
+  {
+   "nombre": "Alondra Castro"
+  },
+  {
+   "nombre": "Donovan Cedillo"
+  },
+  {
+   "nombre": "Cesar Mahonry Cervantes Sanchez"
+  },
+  {
+   "nombre": "Karla Chavarría"
+  },
+  {
+   "nombre": "angel chavez mateos"
+  },
+  {
+   "nombre": "Zuri Chavez"
+  },
+  {
+   "nombre": "Itzel Coyotl"
+  },
+  {
+   "nombre": "Angel Cruz"
+  },
+  {
+   "nombre": "Arath Cruz"
+  },
+  {
+   "nombre": "Karina Cruz"
+  },
+  {
+   "nombre": "Renata De la rosa"
+  },
+  {
+   "nombre": "Oscar Omar De la torre"
+  },
+  {
+   "nombre": "Guzman Esquivel"
+  },
+  {
+   "nombre": "Ashley Fernández"
+  },
+  {
+   "nombre": "Christina Flores Ramirez"
+  },
+  {
+   "nombre": "Nazul Fonseca"
+  },
+  {
+   "nombre": "Derek Alexander Franco"
+  },
+  {
+   "nombre": "Sofia Frias"
+  },
+  {
+   "nombre": "Claudia Fuentes"
+  },
+  {
+   "nombre": "Santiago Galan"
+  },
+  {
+   "nombre": "ITA GAMER"
+  },
+  {
+   "nombre": "Alejandara Garcia"
+  },
+  {
+   "nombre": "Angel Garcia"
+  },
+  {
+   "nombre": "Diego García"
+  },
+  {
+   "nombre": "Elias Garcia"
+  },
+  {
+   "nombre": "Hugo santiago Garcia lopez"
+  },
+  {
+   "nombre": "Leonel Garciamelendez"
+  },
+  {
+   "nombre": "BoyFiend GD"
+  },
+  {
+   "nombre": "Jessica Gomez"
+  },
+  {
+   "nombre": "Renatta Gomez"
+  },
+  {
+   "nombre": "carlos gomez santiz"
+  },
+  {
+   "nombre": "Dael Alejandro Gómez Torres"
+  },
+  {
+   "nombre": "Josué Gonzalez"
+  },
+  {
+   "nombre": "María Fernanda González"
+  },
+  {
+   "nombre": "Milán. A Guzmán Altamirano"
+  },
+  {
+   "nombre": "Leonel Guzmán"
+  },
+  {
+   "nombre": "Allison Sherlyn Guzmán romero"
+  },
+  {
+   "nombre": "Osmart Ham"
+  },
+  {
+   "nombre": "Arlette Hernandez"
+  },
+  {
+   "nombre": "Atzayaka Hernández"
+  },
+  {
+   "nombre": "AXEL HERNANDEZ"
+  },
+  {
+   "nombre": "Daniela Sthefany Hernández"
+  },
+  {
+   "nombre": "Kevin Hernandez"
+  },
+  {
+   "nombre": "Rosaly Hernandez"
+  },
+  {
+   "nombre": "Valentina hernandez"
+  },
+  {
+   "nombre": "maricela ibarra"
+  },
+  {
+   "nombre": "Mariana Jimenez"
+  },
+  {
+   "nombre": "Jordan Josette"
+  },
+  {
+   "nombre": "Ian Josue"
+  },
+  {
+   "nombre": "Allison Yamilet Juárez Sánchez"
+  },
+  {
+   "nombre": "Leonardo Gabriel León León"
+  },
+  {
+   "nombre": "Regina Leon"
+  },
+  {
+   "nombre": "laura leon rodriguez"
+  },
+  {
+   "nombre": "Sham Leyva"
+  },
+  {
+   "nombre": "Cristofher Linares"
+  },
+  {
+   "nombre": "Eduardo Lopez Gonzalez"
+  },
+  {
+   "nombre": "Janetzy López"
+  },
+  {
+   "nombre": "Dorian Yael Luna García"
+  },
+  {
+   "nombre": "Angel Martínez"
+  },
+  {
+   "nombre": "Emiliano Martinez"
+  },
+  {
+   "nombre": "Ivan Martinez"
+  },
+  {
+   "nombre": "Sofia Martinez"
+  },
+  {
+   "nombre": "Allison Mendez"
+  },
+  {
+   "nombre": "Iker Mendez"
+  },
+  {
+   "nombre": "Fátima Montaño"
+  },
+  {
+   "nombre": "Antonio Montes Cervantes"
+  },
+  {
+   "nombre": "Daniel montes"
+  },
+  {
+   "nombre": "Tadeo Mora"
+  },
+  {
+   "nombre": "Santiago Mtz"
+  },
+  {
+   "nombre": "Alisson Muciño"
+  },
+  {
+   "nombre": "Adela Jesabel Najera Cuevas"
+  },
+  {
+   "nombre": "Margarita Navarro Acosta"
+  },
+  {
+   "nombre": "Ricardo Navarro"
+  },
+  {
+   "nombre": "Israel Netza"
+  },
+  {
+   "nombre": "Britany Nicolas"
+  },
+  {
+   "nombre": "Yare Nol"
+  },
+  {
+   "nombre": "Julieta Lourdes Nonato"
+  },
+  {
+   "nombre": "Emiliano Ocampo Bustamante"
+  },
+  {
+   "nombre": "Kendall Ocon"
+  },
+  {
+   "nombre": "Yoselin Ortega"
+  },
+  {
+   "nombre": "María José Ortíz Reveles"
+  },
+  {
+   "nombre": "Leonardo Osorio Ayala"
+  },
+  {
+   "nombre": "Diego Osorio"
+  },
+  {
+   "nombre": "Yunsu Park"
+  },
+  {
+   "nombre": "Héctor Daniel Pedrajo Hita"
+  },
+  {
+   "nombre": "Danna Lyah Pérez"
+  },
+  {
+   "nombre": "Ricardo Pérez"
+  },
+  {
+   "nombre": "Héctor PérezRam"
+  },
+  {
+   "nombre": "Ian André Pichardo"
+  },
+  {
+   "nombre": "Camila Pineda"
+  },
+  {
+   "nombre": "Mateos Rafita"
+  },
+  {
+   "nombre": "Alexis Tadeo Ramirez"
+  },
+  {
+   "nombre": "Graciela Ramirez Gonz"
+  },
+  {
+   "nombre": "Miguel Ramírez"
+  },
+  {
+   "nombre": "Rogelio Ramos"
+  },
+  {
+   "nombre": "Karolina Rendon"
+  },
+  {
+   "nombre": "Amy Nahomi Reynoso De Lucio"
+  },
+  {
+   "nombre": "Jesus Ariel Rios"
+  },
+  {
+   "nombre": "judith rivas"
+  },
+  {
+   "nombre": "Lucero Rodríguez"
+  },
+  {
+   "nombre": "Santiago Rodriguez"
+  },
+  {
+   "nombre": "sharon rodríguez"
+  },
+  {
+   "nombre": "THOMAS RODRIGUEZ"
+  },
+  {
+   "nombre": "Angeles Meybel Rosales"
+  },
+  {
+   "nombre": "Emily Ruiz"
+  },
+  {
+   "nombre": "Evelyn Salazar"
+  },
+  {
+   "nombre": "Dante Saldaña"
+  },
+  {
+   "nombre": "Circe Salguero"
+  },
+  {
+   "nombre": "Karina Salguero"
+  },
+  {
+   "nombre": "Zoe Salinas"
+  },
+  {
+   "nombre": "Arlethe Sánchez"
+  },
+  {
+   "nombre": "Giancarlo Sanchez"
+  },
+  {
+   "nombre": "Isabella Sánchez"
+  },
+  {
+   "nombre": "Aelx Sanchz"
+  },
+  {
+   "nombre": "Jany Michel Sandoval González"
+  },
+  {
+   "nombre": "Mateo Serafín"
+  },
+  {
+   "nombre": "Angy Sos"
+  },
+  {
+   "nombre": "Atenea Sosa"
+  },
+  {
+   "nombre": "Jannet Torres"
+  },
+  {
+   "nombre": "Dom Vallo"
+  },
+  {
+   "nombre": "Alexa Vega"
+  },
+  {
+   "nombre": "Armando Vega"
+  },
+  {
+   "nombre": "betty Velasco"
+  },
+  {
+   "nombre": "Camila Velazquez Olalde"
+  },
+  {
+   "nombre": "Camila Veza"
+  },
+  {
+   "nombre": "Yael Villafuerte"
+  },
+  {
+   "nombre": "Lluvia Zarate"
+  }
+ ],
+ "estudiantes_por_grado": {
+  "1A": [],
+  "1B": [],
+  "1C": [],
+  "1D": [],
+  "2A": [],
+  "2B": [],
+  "2C": [],
+  "2D": [],
+  "3A": [],
+  "3B": [],
+  "3C": [],
+  "3D": []
+ },
+ "maestros": [
+  {
+   "nombre": "Edgar Bucio"
+  }
+ ],
+ "orientadores": [],
+ "directores": []
+}
