@@ -1004,6 +1004,10 @@
      "Perez Rios",
      "Zoe Janete",
      "Janete"
+    ],
+    "verif_motivos": [
+     "Es artista",
+     "Su perfil no ha sido registrado por ella"
     ]
    },
    {
@@ -1041,7 +1045,12 @@
     "tema": "tarjeta",
     "verificado": "#ffd400",
     "miembro_desde": "11 de octubre de 2026",
-    "banner": "11:11"
+    "banner": "11:11",
+    "verif_motivos": [
+     "Verificó y registró su perfil en Unknow",
+     "Es artista",
+     "Pertenece a una empresa"
+    ]
    },
    {
     "nombre": "Reynoso de Lucio Amy Nahomi",

@@ -140,3 +140,8 @@ body.cardpage .top{background:linear-gradient(rgba(0,0,0,.65),transparent)}
 
 .person .vf,.results .vf{width:1em;height:1em;margin-left:.25em;vertical-align:-.15em;animation:none;filter:none}
 .results .vf{width:.95em;height:.95em}
+
+.vf{cursor:pointer;transition:transform .25s var(--ease)}.vf:hover{transform:scale(1.18)}
+.vpop{position:absolute;z-index:200;max-width:300px;padding:14px 16px;border-radius:18px;background:rgba(20,20,26,.82);border:1px solid var(--line);backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);box-shadow:0 18px 50px rgba(0,0,0,.6);font-size:.9rem;opacity:0;transform:translateY(-6px) scale(.96);transition:opacity .2s,transform .3s var(--ease);text-align:left;color:#fff;font-weight:400;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;text-transform:none;letter-spacing:0;line-height:1.35}
+.vpop.on{opacity:1;transform:none}
+.vpop b{display:block;margin-bottom:8px}.vpop ul{list-style:none;display:grid;gap:7px}.vpop li{padding-left:22px;position:relative}.vpop li::before{content:"✓";position:absolute;left:0;color:#ffd400;font-weight:700}.vpop p{color:var(--muted)}
