@@ -1030,7 +1030,11 @@
     "amigos": [
      "iker-mendez"
     ],
-    "foto": "/img/dereck-j.jpg"
+    "foto": "/img/dereck-j.jpg",
+    "tema": "tarjeta",
+    "verificado": "#ffd400",
+    "miembro_desde": "11 de octubre de 2026",
+    "banner": "11:11"
    },
    {
     "nombre": "Reynoso de Lucio Amy Nahomi",
