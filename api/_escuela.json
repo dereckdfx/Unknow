@@ -1711,30 +1711,54 @@
  },
  "maestros": [
   {
-   "nombre": "Edgar Bucio"
+   "nombre": "Edgar Bucio",
+   "slug": "prof-edgar-bucio",
+   "aka": "Edgar Bucio",
+   "rol": "Maestro de 3A"
   },
   {
-   "nombre": "Nel"
+   "nombre": "Nel",
+   "slug": "prof-nel",
+   "aka": "Nel",
+   "rol": "Maestro de 3A"
   },
   {
-   "nombre": "Hilda"
+   "nombre": "Hilda",
+   "slug": "prof-hilda",
+   "aka": "Hilda",
+   "rol": "Maestro de 3A"
   },
   {
-   "nombre": "Oscar"
+   "nombre": "Oscar",
+   "slug": "prof-oscar",
+   "aka": "Oscar",
+   "rol": "Maestro de 3A"
   },
   {
-   "nombre": "Julia"
+   "nombre": "Julia",
+   "slug": "prof-julia",
+   "aka": "Julia",
+   "rol": "Maestro de 3A"
   },
   {
-   "nombre": "Angelica"
+   "nombre": "Angelica",
+   "slug": "prof-angelica",
+   "aka": "Angelica",
+   "rol": "Maestro de 3A"
   },
   {
-   "nombre": "Luis Fernando"
+   "nombre": "Luis Fernando",
+   "slug": "prof-luis-fernando",
+   "aka": "Luis Fernando",
+   "rol": "Maestro de 3A"
   }
  ],
  "orientadores": [
   {
-   "nombre": "Jesús"
+   "nombre": "Jesús",
+   "slug": "prof-jesus",
+   "aka": "Jesús",
+   "rol": "Orientador de 3A"
   }
  ],
  "directores": [],

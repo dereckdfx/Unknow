@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="stylesheet" href="/app.css?v=20261011c">
+<link rel="stylesheet" href="/app.css?v=20261011d">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 <title>Unknow</title>
@@ -29,18 +29,19 @@
     <div class="tags" id="tags"></div>
   </main>
 </div>
-<script src="/app.js?v=20261011c"></script>
+<script src="/app.js?v=20261011d"></script>
 <script>
 requireSession();
 const slug=decodeURIComponent(location.pathname.split('/').pop().replace(/\.html$/,''));
 fetch('/api/escuela',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(D=>{
-  window.ALL=[].concat(D.sin_clasificar,...Object.values(D.estudiantes_por_grado||{}),D.familiares||[]);
+  D.maestros=D.maestros||[];D.orientadores=D.orientadores||[];const STAFF=[].concat(D.maestros.map(x=>Object.assign({_r:'m'},x)),D.orientadores.map(x=>Object.assign({_r:'o'},x)));
+  window.ALL=[].concat(D.sin_clasificar,...Object.values(D.estudiantes_por_grado||{}),D.familiares||[],STAFF);
   let a=D.sin_clasificar.find(x=>x.slug===slug),grado='Grado sin clasificar';
   if(!a){for(const g of Object.keys(D.estudiantes_por_grado||{})){const f=(D.estudiantes_por_grado[g]||[]).find(x=>x.slug===slug);if(f){a=f;grado=g;break}}}
-  let fam=(D.familiares||[]).find(x=>x.slug===slug);
+  let fam=(D.familiares||[]).find(x=>x.slug===slug);const staff=STAFF.find(x=>x.slug===slug);
   const nm=document.getElementById('nm');
-  if(!a&&!fam){nm.textContent='No encontrado';document.getElementById('avatar').textContent='?';return}
-  const p=a||fam;
+  if(!a&&!fam&&!staff){nm.textContent='No encontrado';document.getElementById('avatar').textContent='?';return}
+  const p=a||fam||staff;
   document.title=p.nombre;
   nm.textContent=p.nombre;
   document.getElementById('aka').textContent='a.k.a '+p.aka;
@@ -55,8 +56,11 @@ fetch('/api/escuela',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json
   }
   if(a&&a.familia&&a.familia.length)main.insertAdjacentHTML('beforeend','<section class="reveal"><h2>Familia:</h2><div class="grid">'+a.familia.map(f=>f.slug?'<a class="person" href="/estudiante/juanrulfo/'+f.slug+'.html"><div class="pic">'+av(f)+'</div>'+esc(dn(f))+vbadge(f)+'<small class="rl">'+esc(f.rol)+'</small></a>':'<div class="person"><div class="pic">?</div>Sin nombre<small class="rl">'+esc(f.rol)+'</small></div>').join('')+'</div></section>');
   window.ALL=[].concat(D.sin_clasificar,...Object.values(D.estudiantes_por_grado||{}),D.familiares||[]);
-  const by=s=>ALL.find(x=>x.slug===s||x.nombre===s);
-  const mk=(list,role)=>list.length?'<div class="grid">'+list.map((n,i)=>{const o=by(n);const nm=o?o.nombre:n;const h=o?'/estudiante/juanrulfo/'+o.slug+'.html':null;const inner='<div class="pic">'+av(o||{nombre:nm})+'</div>'+esc(o?dn(o):nm)+vbadge(o||{})+(role?rbadge(role):'');return h?'<a class="person" style="--i:'+i+'" href="'+h+'">'+inner+'</a>':'<div class="person" style="--i:'+i+'">'+inner+'</div>'}).join('')+'</div>':'<div class="empty">Aún no hay nadie aquí.</div>';
+  const by=(s,r)=>(r&&STAFF.find(x=>x._r===r&&x.nombre===s))||ALL.find(x=>x.slug===s||x.nombre===s);
+  const mk=(list,role)=>list.length?'<div class="grid">'+list.map((n,i)=>{const o=by(n,role);const nm=o?o.nombre:n;const h=o?'/estudiante/juanrulfo/'+o.slug+'.html':null;const inner='<div class="pic">'+av(o||{nombre:nm})+'</div>'+esc(o?dn(o):nm)+vbadge(o||{})+(role?rbadge(role):'');return h?'<a class="person" style="--i:'+i+'" href="'+h+'">'+inner+'</a>':'<div class="person" style="--i:'+i+'">'+inner+'</div>'}).join('')+'</div>':'<div class="empty">Aún no hay nadie aquí.</div>';
+  if(staff){chips.push('<span class="tag">'+esc(staff.rol)+'</span>');nm.insertAdjacentHTML('beforeend',rbadge(staff._r));
+    const st=[].concat(D.sin_clasificar,...Object.values(D.estudiantes_por_grado||{})).filter(x=>(staff._r==='m'?x.maestros:x.orientadores||[]).includes(staff.nombre));
+    main.insertAdjacentHTML('beforeend','<section class="reveal"><h2>Alumnos:</h2>'+(st.length?'<div class="grid">'+st.map((o,i)=>'<a class="person" style="--i:'+i+'" href="/estudiante/juanrulfo/'+o.slug+'.html"><div class="pic">'+av(o)+'</div>'+esc(dn(o))+vbadge(o)+'</a>').join('')+'</div>':'<div class="empty">Aún no hay nadie aquí.</div>')+'</section>');}
   if(a){
     const prof=(a.maestros&&a.maestros.length)?a.maestros:[];
     main.insertAdjacentHTML('beforeend','<section class="reveal"><h2>Maestros:</h2>'+mk(prof,'m')+'</section>'+((a.orientadores||[]).length?'<section class="reveal"><h2>Orientador:</h2>'+mk(a.orientadores,'o')+'</section>':'')+'<section class="reveal"><h2>Amigos:</h2>'+mk(a.amigos||[])+'</section><section class="reveal"><h2>Gustos:</h2><div class="chips">'+((a.gustos||[]).length?a.gustos.map((g,i)=>'<span class="chip" style="--i:'+i+'">'+esc(g)+'</span>').join(''):'<span class="empty">Aún no hay gustos.</span>')+'</div></section><section class="reveal"><h2>Comparar:</h2><div class="cmp"><input id="cq" placeholder="Compara con otra persona..." autocomplete="off"><div id="cres" class="cres"></div></div><div id="cout"></div></section>');
@@ -84,6 +88,6 @@ fetch('/api/escuela',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json
   observeReveal(main);
 }).catch(()=>{document.getElementById('nm').textContent='No se pudo cargar'});
 </script>
-<script src="/search.js?v=20261011c"></script>
+<script src="/search.js?v=20261011d"></script>
 </body>
 </html>

@@ -7,6 +7,7 @@
     const add=(a,extra)=>ITEMS.push({name:a.mostrar||a.nombre,full:a.nombre,sub:(extra?extra+' · ':'')+'a.k.a '+a.aka,keys:(a.alias||[]).join(' '),foto:a.foto||'',ver:a.verificado||'',slug:a.slug,url:'/estudiante/juanrulfo/'+a.slug+'.html'});
     D.sin_clasificar.forEach(a=>add(a));
     Object.keys(D.estudiantes_por_grado||{}).forEach(g=>(D.estudiantes_por_grado[g]||[]).forEach(a=>add(a,g)));
+    [].concat((D.maestros||[]).map(x=>[x,'Maestro']),(D.orientadores||[]).map(x=>[x,'Orientador'])).forEach(([a,r])=>ITEMS.push({name:a.nombre,sub:r+' de 3A',foto:'',url:'/estudiante/juanrulfo/'+a.slug+'.html'}));
     (D.familiares||[]).forEach(a=>ITEMS.push({name:a.nombre,sub:a.rol,foto:a.foto||'',url:'/estudiante/juanrulfo/'+a.slug+'.html'}));
     if(q.value)render();
   }).catch(()=>{});
