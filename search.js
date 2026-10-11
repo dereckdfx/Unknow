@@ -22,7 +22,7 @@
     const v=norm(q.value);sel=-1;
     if(!v){res.classList.remove('show');return}
     const m=ITEMS.filter(i=>norm(i.name).includes(v)||norm(i.sub).includes(v)||(i.keys&&norm(i.keys).includes(v))).sort((a,b)=>(norm(a.name).startsWith(v)?0:1)-(norm(b.name).startsWith(v)?0:1)).slice(0,8);
-    res.innerHTML=m.length?m.map((i,k)=>'<a href="'+i.url+'" style="--i:'+k+'"><span class="ico">'+esc(i.name[0].toUpperCase())+'</span><span>'+hl(i.name,v)+'<small>'+esc(i.sub)+'</small></span></a>').join(''):'<div class="none">Sin resultados</div>';
+    res.innerHTML=m.length?m.map((i,k)=>'<a href="'+i.url+'" style="--i:'+k+'"><span class="ico">'+(i.foto?'<img src="'+esc(i.foto)+'" alt="">':esc(i.name[0].toUpperCase()))+'</span><span>'+hl(i.name,v)+'<small>'+esc(i.sub)+'</small></span></a>').join(''):'<div class="none">Sin resultados</div>';
     res.classList.add('show');
   }
   function move(d){
