@@ -834,12 +834,18 @@
    {
     "nombre": "Gordillo Salazar Ian Josue",
     "slug": "ian-josue",
-    "aka": "Ian Josue"
+    "aka": "Ian Josue",
+    "amigos": [
+     "iker-mendez"
+    ]
    },
    {
     "nombre": "Gordillo Salazar Eithan Emanuel",
     "slug": "gordillo-salazar-eithan-emanuel",
-    "aka": "Gordillo Salazar Eithan Emanuel"
+    "aka": "Gordillo Salazar Eithan Emanuel",
+    "amigos": [
+     "iker-mendez"
+    ]
    },
    {
     "nombre": "Gudiño Rendon Hamilton Omar",
@@ -944,7 +950,10 @@
    {
     "nombre": "Perez Rios Zoe Janete",
     "slug": "perez-rios-zoe-janete",
-    "aka": "Perez Rios Zoe Janete"
+    "aka": "Perez Rios Zoe Janete",
+    "amigos": [
+     "iker-mendez"
+    ]
    },
    {
     "nombre": "Popoca Molina Maximiliano Yolotl",
@@ -954,6 +963,9 @@
      "BoyFiend GD",
      "BoyFiend",
      "Maximiliano"
+    ],
+    "amigos": [
+     "iker-mendez"
     ]
    },
    {
@@ -968,6 +980,9 @@
     "alias": [
      "Dereck",
      "Derek"
+    ],
+    "amigos": [
+     "iker-mendez"
     ]
    },
    {
@@ -1018,7 +1033,10 @@
    {
     "nombre": "Santiesteban Garcia Anyelina",
     "slug": "santiesteban-garcia-anyelina",
-    "aka": "Santiesteban Garcia Anyelina"
+    "aka": "Santiesteban Garcia Anyelina",
+    "amigos": [
+     "iker-mendez"
+    ]
    },
    {
     "nombre": "Torres Trejo Cristopher Eitan",
