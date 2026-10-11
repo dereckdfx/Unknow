@@ -151,3 +151,5 @@ body.cardpage .top{background:linear-gradient(rgba(0,0,0,.65),transparent)}
 .person .ulogo,.results .ulogo{width:1em;height:1em;margin-left:.25em;vertical-align:-.15em;animation:none;filter:none}
 
 .results{-webkit-transform:translateZ(0)}
+
+.claim{display:inline-block;margin:.9em auto 0;padding:.55em 1.1em;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;font-size:.85rem;text-decoration:none;transition:background .2s,transform .25s var(--ease)}.claim:hover{background:rgba(255,255,255,.16);transform:translateY(-1px)}
