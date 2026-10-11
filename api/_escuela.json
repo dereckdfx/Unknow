@@ -346,11 +346,6 @@
    "aka": "Leonel Garciamelendez"
   },
   {
-   "nombre": "BoyFiend GD",
-   "slug": "boyfiend-gd",
-   "aka": "BoyFiend GD"
-  },
-  {
    "nombre": "Jessica Gomez",
    "slug": "jessica-gomez",
    "aka": "Jessica Gomez"
@@ -946,7 +941,12 @@
    {
     "nombre": "Popoca Molina Maximiliano Yolotl",
     "slug": "popoca-molina-maximiliano-yolotl",
-    "aka": "Popoca Molina Maximiliano Yolotl"
+    "aka": "Max, Popoca, BoyFiendYT",
+    "alias": [
+     "BoyFiend GD",
+     "BoyFiend",
+     "Maximiliano"
+    ]
    },
    {
     "nombre": "Ramiro Cruz Juan Sebastian",
@@ -956,7 +956,11 @@
    {
     "nombre": "Rebollar Carranza Dereck Josue",
     "slug": "rebollar-carranza-dereck-josue",
-    "aka": "Rebollar Carranza Dereck Josue"
+    "aka": "Dereck J.",
+    "alias": [
+     "Dereck",
+     "Derek"
+    ]
    },
    {
     "nombre": "Reynoso de Lucio Amy Nahomi",
