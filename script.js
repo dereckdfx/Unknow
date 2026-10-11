@@ -15,7 +15,7 @@ form.addEventListener('submit',async e=>{
   try{
     const r=await fetch('/api/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code:raw})});
     const d=await r.json().catch(()=>({}));
-    if(r.ok&&d.ok){window.location.href='home.html';return}
+    if(r.ok&&d.ok){login.style.transition='opacity .3s,transform .3s';login.style.opacity=0;login.style.transform='scale(.97)';setTimeout(()=>{window.location.href='home.html'},280);return}
     error.textContent=d.error||'Código incorrecto.';
     input.classList.remove('shake');void input.offsetWidth;input.classList.add('shake');
   }catch{error.textContent='No se pudo verificar. Intenta de nuevo.';}
