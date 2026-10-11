@@ -35,7 +35,7 @@
 requireSession();
 function people(el,list,link){
   el.innerHTML=list.length?list.map((p,i)=>{
-    const inner='<div class="pic">'+(p.foto?'<img src="'+esc(p.foto)+'" alt="">':esc(p.nombre[0].toUpperCase()))+'</div>'+esc(p.nombre);
+    const inner='<div class="pic">'+av(p)+'</div>'+esc(p.nombre);
     return link&&p.slug?'<a class="person" style="--i:'+i+'" href="/estudiante/juanrulfo/'+p.slug+'.html">'+inner+'</a>':'<div class="person" style="--i:'+i+'">'+inner+'</div>';
   }).join(''):'<div class="empty">Aún no hay nadie aquí.</div>';
 }

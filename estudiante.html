@@ -32,6 +32,7 @@
 requireSession();
 const slug=decodeURIComponent(location.pathname.split('/').pop().replace(/\.html$/,''));
 fetch('/api/escuela',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(D=>{
+  window.ALL=[].concat(D.sin_clasificar,...Object.values(D.estudiantes_por_grado||{}),D.familiares||[]);
   let a=D.sin_clasificar.find(x=>x.slug===slug),grado='Grado sin clasificar';
   if(!a){for(const g of Object.keys(D.estudiantes_por_grado||{})){const f=(D.estudiantes_por_grado[g]||[]).find(x=>x.slug===slug);if(f){a=f;grado=g;break}}}
   let fam=(D.familiares||[]).find(x=>x.slug===slug);
@@ -48,12 +49,12 @@ fetch('/api/escuela',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json
   if(fam){
     chips.push('<span class="tag">'+esc(fam.rol)+'</span>');
     const hijo=[].concat(D.sin_clasificar,...Object.values(D.estudiantes_por_grado||{})).find(x=>x.slug===fam.hijo_slug);
-    if(hijo)main.insertAdjacentHTML('beforeend','<section class="reveal"><h2>Familia:</h2><div class="grid"><a class="person" href="/estudiante/juanrulfo/'+hijo.slug+'.html"><div class="pic">'+esc(hijo.nombre[0].toUpperCase())+'</div>'+esc(hijo.nombre)+'<small class="rl">Hijo/a</small></a></div></section>');
+    if(hijo)main.insertAdjacentHTML('beforeend','<section class="reveal"><h2>Familia:</h2><div class="grid"><a class="person" href="/estudiante/juanrulfo/'+hijo.slug+'.html"><div class="pic">'+av(hijo)+'</div>'+esc(hijo.nombre)+'<small class="rl">Hijo/a</small></a></div></section>');
   }
-  if(a&&a.familia&&a.familia.length)main.insertAdjacentHTML('beforeend','<section class="reveal"><h2>Familia:</h2><div class="grid">'+a.familia.map(f=>f.slug?'<a class="person" href="/estudiante/juanrulfo/'+f.slug+'.html"><div class="pic">'+esc(f.nombre[0].toUpperCase())+'</div>'+esc(f.nombre)+'<small class="rl">'+esc(f.rol)+'</small></a>':'<div class="person"><div class="pic">?</div>Sin nombre<small class="rl">'+esc(f.rol)+'</small></div>').join('')+'</div></section>');
+  if(a&&a.familia&&a.familia.length)main.insertAdjacentHTML('beforeend','<section class="reveal"><h2>Familia:</h2><div class="grid">'+a.familia.map(f=>f.slug?'<a class="person" href="/estudiante/juanrulfo/'+f.slug+'.html"><div class="pic">'+av(f)+'</div>'+esc(f.nombre)+'<small class="rl">'+esc(f.rol)+'</small></a>':'<div class="person"><div class="pic">?</div>Sin nombre<small class="rl">'+esc(f.rol)+'</small></div>').join('')+'</div></section>');
   window.ALL=[].concat(D.sin_clasificar,...Object.values(D.estudiantes_por_grado||{}),D.familiares||[]);
   const by=s=>ALL.find(x=>x.slug===s||x.nombre===s);
-  const mk=(list,link)=>list.length?'<div class="grid">'+list.map((n,i)=>{const o=by(n);const nm=o?o.nombre:n;const h=o?'/estudiante/juanrulfo/'+o.slug+'.html':null;const inner='<div class="pic">'+esc(nm[0].toUpperCase())+'</div>'+esc(nm);return h?'<a class="person" style="--i:'+i+'" href="'+h+'">'+inner+'</a>':'<div class="person" style="--i:'+i+'">'+inner+'</div>'}).join('')+'</div>':'<div class="empty">Aún no hay nadie aquí.</div>';
+  const mk=(list,link)=>list.length?'<div class="grid">'+list.map((n,i)=>{const o=by(n);const nm=o?o.nombre:n;const h=o?'/estudiante/juanrulfo/'+o.slug+'.html':null;const inner='<div class="pic">'+av(o||{nombre:nm})+'</div>'+esc(nm);return h?'<a class="person" style="--i:'+i+'" href="'+h+'">'+inner+'</a>':'<div class="person" style="--i:'+i+'">'+inner+'</div>'}).join('')+'</div>':'<div class="empty">Aún no hay nadie aquí.</div>';
   if(a){
     const prof=(a.maestros&&a.maestros.length)?a.maestros:[];
     main.insertAdjacentHTML('beforeend','<section class="reveal"><h2>Maestros:</h2>'+mk(prof)+'</section><section class="reveal"><h2>Amigos:</h2>'+mk(a.amigos||[])+'</section><section class="reveal"><h2>Gustos:</h2><div class="chips">'+((a.gustos||[]).length?a.gustos.map((g,i)=>'<span class="chip" style="--i:'+i+'">'+esc(g)+'</span>').join(''):'<span class="empty">Aún no hay gustos.</span>')+'</div></section><section class="reveal"><h2>Comparar:</h2><div class="cmp"><input id="cq" placeholder="Compara con otra persona..." autocomplete="off"><div id="cres" class="cres"></div></div><div id="cout"></div></section>');

@@ -21,5 +21,9 @@
     catch{location.replace('/index.html');return false}
     return true;
   };
+  window.av=function(o){
+    if(o&&!o.foto&&o.slug&&window.ALL){const f=window.ALL.find(x=>x.slug===o.slug);if(f)o=f}
+    return o&&o.foto?'<img src="'+esc(o.foto)+'" alt="">':esc(((o&&o.nombre)||'?')[0].toUpperCase());
+  };
   window.esc=function(x){return String(x).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))};
 })();
