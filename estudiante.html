@@ -51,6 +51,25 @@ fetch('/api/escuela',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json
     if(hijo)main.insertAdjacentHTML('beforeend','<section class="reveal"><h2>Familia:</h2><div class="grid"><a class="person" href="/estudiante/juanrulfo/'+hijo.slug+'.html"><div class="pic">'+esc(hijo.nombre[0].toUpperCase())+'</div>'+esc(hijo.nombre)+'<small class="rl">Hijo/a</small></a></div></section>');
   }
   if(a&&a.familia&&a.familia.length)main.insertAdjacentHTML('beforeend','<section class="reveal"><h2>Familia:</h2><div class="grid">'+a.familia.map(f=>'<a class="person" href="/estudiante/juanrulfo/'+f.slug+'.html"><div class="pic">'+esc(f.nombre[0].toUpperCase())+'</div>'+esc(f.nombre)+'<small class="rl">'+esc(f.rol)+'</small></a>').join('')+'</div></section>');
+  window.ALL=[].concat(D.sin_clasificar,...Object.values(D.estudiantes_por_grado||{}),D.familiares||[]);
+  const by=s=>ALL.find(x=>x.slug===s||x.nombre===s);
+  const mk=(list,link)=>list.length?'<div class="grid">'+list.map((n,i)=>{const o=by(n);const nm=o?o.nombre:n;const h=o?'/estudiante/juanrulfo/'+o.slug+'.html':null;const inner='<div class="pic">'+esc(nm[0].toUpperCase())+'</div>'+esc(nm);return h?'<a class="person" style="--i:'+i+'" href="'+h+'">'+inner+'</a>':'<div class="person" style="--i:'+i+'">'+inner+'</div>'}).join('')+'</div>':'<div class="empty">Aún no hay nadie aquí.</div>';
+  if(a){
+    const prof=(a.maestros&&a.maestros.length)?a.maestros:[];
+    main.insertAdjacentHTML('beforeend','<section class="reveal"><h2>Maestros:</h2>'+mk(prof)+'</section><section class="reveal"><h2>Amigos:</h2>'+mk(a.amigos||[])+'</section><section class="reveal"><h2>Gustos:</h2><div class="chips">'+((a.gustos||[]).length?a.gustos.map((g,i)=>'<span class="chip" style="--i:'+i+'">'+esc(g)+'</span>').join(''):'<span class="empty">Aún no hay gustos.</span>')+'</div></section><section class="reveal"><h2>Comparar:</h2><div class="cmp"><input id="cq" placeholder="Compara con otra persona..." autocomplete="off"><div id="cres" class="cres"></div></div><div id="cout"></div></section>');
+    const cq=document.getElementById('cq'),cres=document.getElementById('cres'),cout=document.getElementById('cout');
+    const nn=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+    cq.addEventListener('input',()=>{const v=nn(cq.value.trim());if(!v){cres.innerHTML='';return}
+      cres.innerHTML=ALL.filter(x=>x.slug!==a.slug&&(nn(x.nombre).includes(v)||nn(x.aka||'').includes(v)||nn((x.alias||[]).join(' ')).includes(v))).slice(0,6).map(x=>'<button type="button" data-s="'+x.slug+'">'+esc(x.nombre)+'</button>').join('')});
+    cres.addEventListener('click',ev=>{const b=ev.target.closest('button');if(!b)return;const o=by(b.dataset.s);cres.innerHTML='';cq.value=o.nombre;
+      const inter=(x,y)=>x.filter(i=>y.includes(i));
+      const fa=(a.amigos||[]).map(s=>(by(s)||{nombre:s}).nombre),fb=(o.amigos||[]).map(s=>(by(s)||{nombre:s}).nombre);
+      const ca=inter(fa,fb),cg=inter((a.gustos||[]).map(x=>x.toLowerCase()),(o.gustos||[]).map(x=>x.toLowerCase()));
+      const tot=new Set([...(a.gustos||[]).map(x=>x.toLowerCase()),...(o.gustos||[]).map(x=>x.toLowerCase())]).size;
+      const pct=tot?Math.round(cg.length/tot*100):0;
+      const list=l=>l.length?'<div class="chips">'+l.map(x=>'<span class="chip on">'+esc(x)+'</span>').join('')+'</div>':'<div class="empty">Ninguno en común todavía.</div>';
+      cout.innerHTML='<div class="cmpbox"><div class="pct">'+pct+'%<small>de gustos en común</small></div><h3>Amigos en común</h3>'+list(ca)+'<h3>Gustos en común</h3>'+list(cg)+'</div>'});
+  }
   document.getElementById('tags').innerHTML=chips.join('');
   observeReveal(main);
 }).catch(()=>{document.getElementById('nm').textContent='No se pudo cargar'});
