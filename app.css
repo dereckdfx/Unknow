@@ -146,3 +146,6 @@ body.cardpage .top{background:linear-gradient(rgba(0,0,0,.65),transparent)}
 .vpop.on{opacity:1;transform:none}
 .vpop b{display:block;margin-bottom:8px}.vpop ul{list-style:none;display:grid;gap:7px}.vpop li{padding-left:22px;position:relative}.vpop li::before{content:"✓";position:absolute;left:0;color:#ffd400;font-weight:700}.vpop p{color:var(--muted)}
 
+
+.ulogo{width:.8em;height:.8em;margin-left:.3em;vertical-align:-.08em;display:inline-block;animation:vfin .8s var(--ease) .65s both;filter:drop-shadow(0 0 8px rgba(255,92,157,.5))}
+.person .ulogo,.results .ulogo{width:1em;height:1em;margin-left:.25em;vertical-align:-.15em;animation:none;filter:none}

@@ -1050,7 +1050,8 @@
      "Verificó y registró su perfil en Unknow",
      "Es artista",
      "Pertenece a una empresa"
-    ]
+    ],
+    "logo_unknow": true
    },
    {
     "nombre": "Reynoso de Lucio Amy Nahomi",
