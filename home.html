@@ -46,6 +46,16 @@ body{position:relative;overflow-x:hidden}
 .hero{padding:12vh 24px;text-align:center}
 .hero h1{font-size:clamp(2rem,6vw,3.4rem);font-weight:800}
 .hero p{color:rgba(255,255,255,.6);margin-top:10px}
+
+.results{position:absolute;top:calc(100% + 10px);left:0;right:0;padding:8px;border-radius:24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+  backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);box-shadow:0 12px 40px rgba(0,0,0,.5);
+  opacity:0;transform:translateY(-8px) scale(.98);pointer-events:none;transition:opacity .25s,transform .3s cubic-bezier(.22,1,.36,1)}
+.results.show{opacity:1;transform:none;pointer-events:auto}
+.results a{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:16px;color:#fff;text-decoration:none;transition:background .2s}
+.results a:hover{background:rgba(255,255,255,.14)}
+.results .ico{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:700}
+.results small{display:block;color:rgba(255,255,255,.55);font-size:.8rem}
+.results .none{padding:12px 14px;color:rgba(255,255,255,.55)}
 </style>
 </head>
 <body>
@@ -56,6 +66,7 @@ body{position:relative;overflow-x:hidden}
       <input id="q" type="text" placeholder="Buscar..." autocomplete="off" spellcheck="false">
       <button id="clear" type="button" aria-label="Borrar">✕</button>
       <span class="ripple" id="ripple"></span>
+      <div class="results" id="results"></div>
     </label>
   </header>
 </div>
@@ -79,6 +90,22 @@ c.addEventListener('click',()=>{
   s.classList.add('clearing');
   setTimeout(()=>{q.value='';s.classList.remove('has','clearing');bump();q.focus()},180);
 });
+
+const res=document.getElementById('results');
+const ITEMS=[{name:'Juan Rulfo',sub:'a.k.a Juan Rulfo 0986',url:'/escuela/juanrulfo.html'}];
+function norm(t){return t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim()}
+function render(){
+  const v=norm(q.value);
+  if(!v){res.classList.remove('show');return}
+  const m=ITEMS.filter(i=>norm(i.name).includes(v)||norm(i.sub).includes(v));
+  res.innerHTML=m.length?m.map(i=>`<a href="${i.url}"><span class="ico">${i.name[0]}</span><span>${i.name}<small>${i.sub}</small></span></a>`).join(''):'<div class="none">Sin resultados</div>';
+  res.classList.add('show');
+}
+q.addEventListener('input',render);
+q.addEventListener('keydown',e=>{if(e.key==='Enter'){const a=res.querySelector('a');if(a)location.href=a.getAttribute('href')}});
+document.addEventListener('click',e=>{if(!s.contains(e.target))res.classList.remove('show')});
+q.addEventListener('focus',render);
+c.addEventListener('click',()=>setTimeout(render,250));
 </script>
 </body>
 </html>
