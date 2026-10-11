@@ -4,7 +4,10 @@
   let tm,sel=-1,ITEMS=[{name:'Juan Rulfo',sub:'a.k.a Juan Rulfo 0986',url:'/escuela/juanrulfo.html'}];
   fetch('/api/escuela',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(D=>{
     if(!D)return;
-    D.sin_clasificar.forEach(a=>ITEMS.push({name:a.nombre,sub:'a.k.a '+a.aka,url:'/estudiante/juanrulfo/'+a.slug+'.html'}));
+    const add=(a,extra)=>ITEMS.push({name:a.nombre,sub:(extra?extra+' · ':'')+'a.k.a '+a.aka,url:'/estudiante/juanrulfo/'+a.slug+'.html'});
+    D.sin_clasificar.forEach(a=>add(a));
+    Object.keys(D.estudiantes_por_grado||{}).forEach(g=>(D.estudiantes_por_grado[g]||[]).forEach(a=>add(a,g)));
+    (D.familiares||[]).forEach(a=>ITEMS.push({name:a.nombre,sub:a.rol,url:'/estudiante/juanrulfo/'+a.slug+'.html'}));
     if(q.value)render();
   }).catch(()=>{});
   function bump(){rp.classList.remove('go');void rp.offsetWidth;rp.classList.add('go');s.classList.add('typing');clearTimeout(tm);tm=setTimeout(()=>s.classList.remove('typing'),500)}

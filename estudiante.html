@@ -24,6 +24,7 @@
     <div class="avatar" id="avatar"></div>
     <h1 id="nm"></h1>
     <p class="aka" id="aka"></p>
+    <div class="tags" id="tags"></div>
   </main>
 </div>
 <script src="/app.js"></script>
@@ -31,12 +32,27 @@
 requireSession();
 const slug=decodeURIComponent(location.pathname.split('/').pop().replace(/\.html$/,''));
 fetch('/api/escuela',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(D=>{
-  const a=D.sin_clasificar.find(x=>x.slug===slug);
-  if(!a){document.getElementById('nm').textContent='No encontrado';document.getElementById('avatar').textContent='?';return}
-  document.title=a.nombre;
-  document.getElementById('nm').textContent=a.nombre;
-  document.getElementById('aka').textContent='a.k.a '+a.aka;
-  document.getElementById('avatar').innerHTML=a.foto?'<img src="'+esc(a.foto)+'" alt="">':esc(a.nombre[0].toUpperCase());
+  let a=D.sin_clasificar.find(x=>x.slug===slug),grado='Grado sin clasificar';
+  if(!a){for(const g of Object.keys(D.estudiantes_por_grado||{})){const f=(D.estudiantes_por_grado[g]||[]).find(x=>x.slug===slug);if(f){a=f;grado=g;break}}}
+  let fam=(D.familiares||[]).find(x=>x.slug===slug);
+  const nm=document.getElementById('nm');
+  if(!a&&!fam){nm.textContent='No encontrado';document.getElementById('avatar').textContent='?';return}
+  const p=a||fam;
+  document.title=p.nombre;
+  nm.textContent=p.nombre;
+  document.getElementById('aka').textContent='a.k.a '+p.aka;
+  document.getElementById('avatar').innerHTML=p.foto?'<img src="'+esc(p.foto)+'" alt="">':esc(p.nombre[0].toUpperCase());
+  const main=document.querySelector('.profile');
+  const chips=[];
+  if(a)chips.push('<span class="tag">'+esc(grado==='Grado sin clasificar'?grado:'Grupo '+grado)+'</span>');
+  if(fam){
+    chips.push('<span class="tag">'+esc(fam.rol)+'</span>');
+    const hijo=[].concat(D.sin_clasificar,...Object.values(D.estudiantes_por_grado||{})).find(x=>x.slug===fam.hijo_slug);
+    if(hijo)main.insertAdjacentHTML('beforeend','<section class="reveal"><h2>Familia:</h2><div class="grid"><a class="person" href="/estudiante/juanrulfo/'+hijo.slug+'.html"><div class="pic">'+esc(hijo.nombre[0].toUpperCase())+'</div>'+esc(hijo.nombre)+'<small class="rl">Hijo/a</small></a></div></section>');
+  }
+  if(a&&a.familia&&a.familia.length)main.insertAdjacentHTML('beforeend','<section class="reveal"><h2>Familia:</h2><div class="grid">'+a.familia.map(f=>'<a class="person" href="/estudiante/juanrulfo/'+f.slug+'.html"><div class="pic">'+esc(f.nombre[0].toUpperCase())+'</div>'+esc(f.nombre)+'<small class="rl">'+esc(f.rol)+'</small></a>').join('')+'</div></section>');
+  document.getElementById('tags').innerHTML=chips.join('');
+  observeReveal(main);
 }).catch(()=>{document.getElementById('nm').textContent='No se pudo cargar'});
 </script>
 <script src="/search.js"></script>
