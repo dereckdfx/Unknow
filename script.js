@@ -1,7 +1,7 @@
 const intro=document.getElementById('intro'),login=document.getElementById('login'),
 form=document.getElementById('form'),input=document.getElementById('code'),error=document.getElementById('error'),
 btn=form.querySelector('button');
-setTimeout(()=>{intro.classList.add('done');login.classList.remove('hidden');requestAnimationFrame(()=>login.classList.add('show'));input.focus()},1100);
+setTimeout(()=>{intro.classList.add('done');login.classList.remove('hidden');requestAnimationFrame(()=>login.classList.add('show'));input.focus()},750);
 input.addEventListener('input',()=>{
   const raw=input.value.replace(/[^a-z0-9]/gi,'').toUpperCase().slice(0,16);
   input.value=raw.match(/.{1,4}/g)?.join('-')||'';
