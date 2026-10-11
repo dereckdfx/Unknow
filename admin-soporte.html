@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="stylesheet" href="/app.css?v=20261011i">
+<link rel="stylesheet" href="/app.css?v=20261011j">
 <title>Panel de soporte · Unknow</title>
 <style>
 .sup{max-width:520px;margin:24px auto 40px;padding:0 16px;display:flex;flex-direction:column;gap:12px;height:calc(100dvh - 60px)}
@@ -33,8 +33,8 @@
   <a class="btn" href="/home.html" style="background:transparent;color:#fff;opacity:.7">← Volver</a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="/app.js?v=20261011i"></script>
-<script src="/sb.js?v=20261011i"></script>
+<script src="/app.js?v=20261011j"></script>
+<script src="/sb.js?v=20261011j"></script>
 <script>
 requireSession();
 const $=i=>document.getElementById(i);let me=null,cur=null,all=[];
@@ -56,6 +56,6 @@ $('hl').onclick=e=>{const b=e.target.closest('button');if(!b)return;cur=b.datase
 })();
 $('f').onsubmit=async e=>{e.preventDefault();const t=$('t').value.trim();if(!t||!cur)return;$('t').value='';
   const {error}=await sb.from('mensajes').insert({hilo:cur,autor:me.id,es_soporte:true,texto:t});
-  if(error){$('t').value=t;alert(error.message)}else load()};
+  if(error){$('t').value=t;$('need').style.display='';$('need').textContent='No se pudo enviar: '+error.message}else{$('need').style.display='none';load()}};
 </script>
 </body></html>

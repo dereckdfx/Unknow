@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="stylesheet" href="/app.css?v=20261011i">
+<link rel="stylesheet" href="/app.css?v=20261011j">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 <title>Unknow</title>
@@ -29,8 +29,9 @@
     <div class="tags" id="tags"></div>
   </main>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>window.SB_URL='https://lpiifwwfsfzpjgmjjlpc.supabase.co';window.SB_KEY='sb_publishable_2f2i9te8f2aSs0ujbarctw_dAmoHxtl';</script>
-<script src="/app.js?v=20261011i"></script>
+<script src="/app.js?v=20261011j"></script>
 <script>
 requireSession();
 const slug=decodeURIComponent(location.pathname.split('/').pop().replace(/\.html$/,''));
@@ -89,8 +90,32 @@ fetch('/api/escuela',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json
   }
   if(a&&a.miembro_desde)main.insertAdjacentHTML('beforeend','<section class="reveal ms"><h2>Member Since</h2><p class="msd">'+esc(a.miembro_desde)+'</p></section>');
   observeReveal(main);
+  (async()=>{try{
+    if(!window.supabase||!(a||false))return;
+    const c=window.supabase.createClient(SB_URL,SB_KEY);
+    const {data:{session}}=await c.auth.getSession();if(!session)return;
+    const {data:mine}=await c.from('perfiles').select('*').eq('user_id',session.user.id).maybeSingle();
+    if(!mine||mine.slug!==slug)return;
+    document.querySelectorAll('.claim,.acclink').forEach(x=>x.remove());
+    const btn=document.createElement('button');btn.type='button';btn.className='editbtn';btn.innerHTML='<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3 17.25V21h3.75L17.8 9.94l-3.75-3.75zM20.7 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"/></svg> Editar perfil';
+    document.getElementById('tags').insertAdjacentElement('afterend',btn);
+    btn.onclick=()=>{
+      const m=document.createElement('div');m.className='emodal';
+      m.innerHTML='<div class="ebox"><div class="ehead"><button type="button" class="ex" aria-label="Cerrar">✕</button><b>Editar perfil</b><button type="button" class="es">Guardar</button></div><div class="ebody"><label>Nombre / a.k.a</label><input id="e_aka"><label>Bio</label><textarea id="e_bio" rows="5"></textarea><label>Foto (enlace de imagen)</label><input id="e_foto" type="url" placeholder="https://..."><label>Gustos (separados por coma)</label><textarea id="e_gus" rows="3"></textarea><div class="emsg" id="e_msg"></div></div></div>';
+      document.body.appendChild(m);
+      m.querySelector('#e_aka').value=mine.aka||'';m.querySelector('#e_bio').value=mine.bio||'';m.querySelector('#e_foto').value=mine.foto||'';m.querySelector('#e_gus').value=(mine.gustos||[]).join(', ');
+      m.querySelector('.ex').onclick=()=>m.remove();
+      m.querySelector('.es').onclick=async()=>{
+        const b=m.querySelector('.es');b.disabled=true;const msg=m.querySelector('#e_msg');msg.textContent='';
+        const row={aka:m.querySelector('#e_aka').value.trim(),bio:m.querySelector('#e_bio').value.trim(),foto:m.querySelector('#e_foto').value.trim(),gustos:m.querySelector('#e_gus').value.split(',').map(x=>x.trim()).filter(Boolean),updated_at:new Date().toISOString()};
+        const {error}=await c.from('perfiles').update(row).eq('user_id',session.user.id);
+        if(error){b.disabled=false;msg.textContent='No se pudo guardar: '+error.message;return}
+        msg.textContent='Guardado ✓';setTimeout(()=>location.reload(),500);
+      };
+    };
+  }catch(err){console.error(err)}})();
 }).catch(()=>{document.getElementById('nm').textContent='No se pudo cargar'});
 </script>
-<script src="/search.js?v=20261011i"></script>
+<script src="/search.js?v=20261011j"></script>
 </body>
 </html>

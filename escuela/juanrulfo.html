@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="stylesheet" href="/app.css?v=20261011i">
+<link rel="stylesheet" href="/app.css?v=20261011j">
 <title>Juan Rulfo</title>
 </head>
 <body>
@@ -30,7 +30,7 @@
     <section class="reveal"><h2>Directores:</h2><div class="grid" id="directores"></div></section>
   </main>
 </div>
-<script src="/app.js?v=20261011i"></script>
+<script src="/app.js?v=20261011j"></script>
 <script>
 requireSession();
 document.getElementById('sn').insertAdjacentHTML('beforeend',rbadge('s'));
@@ -54,6 +54,6 @@ fetch('/api/escuela',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json
   people(document.getElementById('directores'),D.directores);
 }).catch(()=>{document.getElementById('estudiantes').innerHTML='<div class="empty">No se pudo cargar. Recarga la página.</div>'});
 </script>
-<script src="/search.js?v=20261011i"></script>
+<script src="/search.js?v=20261011j"></script>
 </body>
 </html>

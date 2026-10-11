@@ -156,3 +156,13 @@ body.cardpage .top{background:linear-gradient(rgba(0,0,0,.65),transparent)}
 
 .acclink{position:fixed;right:14px;bottom:14px;z-index:30;padding:.6em 1.1em;border-radius:999px;background:rgba(30,30,36,.95);border:1px solid var(--line);color:#fff;text-decoration:none;font-size:.85rem}
 .bio{max-width:36em;margin:.6em auto 0;opacity:.85;line-height:1.4}
+
+.editbtn{display:inline-flex;align-items:center;gap:.5em;margin:.9em auto 0;padding:.65em 1.3em;border:0;border-radius:12px;background:rgba(255,255,255,.14);color:#fff;font:inherit;font-weight:600;cursor:pointer}.editbtn:hover{background:rgba(255,255,255,.22)}
+.emodal{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.7);display:flex;align-items:flex-end;justify-content:center}
+.ebox{width:100%;max-width:520px;max-height:92dvh;background:#1a1a20;border-radius:22px 22px 0 0;display:flex;flex-direction:column;animation:rise .3s var(--ease) both}
+.ehead{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--line)}
+.ehead button{background:none;border:0;color:#fff;font:inherit;cursor:pointer}.ehead .es{color:#8ea1ff;font-weight:700}.ehead .es:disabled{opacity:.5}
+.ebody{padding:16px 18px 28px;overflow:auto;display:flex;flex-direction:column;gap:8px}
+.ebody label{font-size:.8rem;opacity:.7;margin-top:6px}
+.ebody input,.ebody textarea{width:100%;box-sizing:border-box;background:rgba(255,255,255,.08);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:#fff;font:inherit;font-size:16px;outline:none}
+.emsg{min-height:1.2em;font-size:.85rem;text-align:center}
