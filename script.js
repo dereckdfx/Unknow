@@ -1,7 +1,7 @@
 const intro=document.getElementById('intro'),login=document.getElementById('login'),
 form=document.getElementById('form'),input=document.getElementById('code'),error=document.getElementById('error'),
 btn=form.querySelector('button');
-setTimeout(()=>{intro.classList.add('done');login.classList.remove('hidden');requestAnimationFrame(()=>login.classList.add('show'));input.focus()},2700);
+setTimeout(()=>{intro.classList.add('done');login.classList.remove('hidden');const ft=document.getElementById('foot');ft.classList.remove('hidden');requestAnimationFrame(()=>{login.classList.add('show');ft.classList.add('show')});input.focus()},2700);
 input.addEventListener('input',()=>{
   const raw=input.value.replace(/[^a-z0-9]/gi,'').toUpperCase().slice(0,16);
   input.value=raw.match(/.{1,4}/g)?.join('-')||'';
@@ -21,3 +21,5 @@ form.addEventListener('submit',async e=>{
   }catch{error.textContent='No se pudo verificar. Intenta de nuevo.';}
   finally{btn.disabled=false}
 });
+
+const syncBtn=()=>{btn.disabled=input.value.replace(/-/g,'').length!==16};input.addEventListener('input',syncBtn);syncBtn();

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="stylesheet" href="/app.css?v=20261011j">
+<link rel="stylesheet" href="/app.css?v=20261012a">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 <title>Unknow</title>
@@ -31,7 +31,7 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>window.SB_URL='https://lpiifwwfsfzpjgmjjlpc.supabase.co';window.SB_KEY='sb_publishable_2f2i9te8f2aSs0ujbarctw_dAmoHxtl';</script>
-<script src="/app.js?v=20261011j"></script>
+<script src="/app.js?v=20261012a"></script>
 <script>
 requireSession();
 const slug=decodeURIComponent(location.pathname.split('/').pop().replace(/\.html$/,''));
@@ -80,7 +80,7 @@ fetch('/api/escuela',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json
   }
   document.getElementById('tags').innerHTML=chips.join('');
   if(p.bio)document.getElementById('aka').insertAdjacentHTML('afterend','<p class="bio">'+esc(p.bio)+'</p>');
-  if(!p.verificado&&!staff&&!fam&&!p.cuenta){const b=document.createElement('a');b.className='claim';b.textContent='¿Este perfil es tuyo?';b.href='/soporte.html?p='+encodeURIComponent(p.nombre);
+  if(!p.verificado&&!staff&&!fam&&!p.cuenta){const b=document.createElement('a');b.className='claim';b.textContent='¿Este perfil es tuyo?';b.href='mailto:stadeereck@gmail.com?subject='+encodeURIComponent('Verificación de perfil en Unknow: '+p.nombre)+'&body='+encodeURIComponent('Hola, este perfil es mío y quiero solicitar su verificación.\n\nPerfil: '+p.nombre+'\nEnlace: '+location.href+'\n\nMi nombre:\nGrupo:\n');
     document.getElementById('tags').insertAdjacentElement('afterend',b);}
   if(p.verificado)nm.insertAdjacentHTML('beforeend','<svg class="vf" data-slug="'+esc(p.slug)+'" tabindex="0" viewBox="0 0 24 24" aria-label="Perfil verificado" role="img"><title>Perfil verificado</title><path fill="'+esc(p.verificado)+'" d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z"/></svg>');
   if(a&&a.logo_unknow)nm.insertAdjacentHTML('beforeend','<img class="ulogo" src="/img/unknow-logo.svg" alt="Unknow" title="Unknow">');
@@ -116,6 +116,6 @@ fetch('/api/escuela',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json
   }catch(err){console.error(err)}})();
 }).catch(()=>{document.getElementById('nm').textContent='No se pudo cargar'});
 </script>
-<script src="/search.js?v=20261011j"></script>
+<script src="/search.js?v=20261012a"></script>
 </body>
 </html>
